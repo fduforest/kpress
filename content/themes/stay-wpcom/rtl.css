@@ -1,0 +1,619 @@
+/*
+Theme Name: Stay
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+/* =Global
+----------------------------------------------- */
+
+/* Text elements */
+
+ul, ol {
+	margin: 0 30px 15px 0;
+}
+
+li > ul,
+li > ol {
+	margin-right: 15px;
+	margin-left: auto;
+}
+
+textarea {
+	padding-right: 3px;
+	padding-left: 0;
+}
+
+/* Links */
+
+/* Alignment */
+.alignright {
+	float: right;
+	margin: 15px 0 15px 15px;
+}
+
+.alignleft {
+	float: left;
+	margin: 15px 15px 15px 0;
+}
+
+/* =Layout
+----------------------------------------------- */
+
+#masthead hgroup {
+	float: right;
+}
+
+.featured .hentry {
+	left: 30px;
+	right: auto;
+}
+
+.featured h2 {
+	float: left;
+	padding: .25em 1.25em .25em 1em;
+}
+
+.featured h2:after {
+	margin-right: 10px;
+	margin-left: auto;
+}
+
+#featured-content .flex-control-nav {
+	right: 30px;
+	left: auto;
+}
+
+.home-widgets {
+	border-left: 1px solid #f6f6f6;
+	float: right;
+	border-right: none;
+}
+
+.home-widgets:last-child {
+	border-left: 0 none;
+	border-right: none;
+}
+
+#primary {
+	float: right;
+}
+
+#content {
+	padding-right: 280px;
+	padding-left: 0;
+}
+
+.blog #content,
+.archive #content,
+.single-post #content {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.page-template-page-templateshome-page-php #content {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+#secondary {
+	float: right;
+	margin: 0 -100% 15px 30px;
+}
+
+.three-column #secondary {
+	margin-right: -920px;
+	margin-left: auto;
+}
+
+.blog #secondary,
+.archive #secondary,
+.single-post #secondary {
+	margin: 0 30px 15px 0;
+}
+
+#tertiary {
+	float: right;
+	margin: 0 30px 15px 0;
+}
+
+.site-info {
+	float: right;
+}
+
+/* =Menu
+----------------------------------------------- */
+
+.navigation-main ul {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.navigation-main ul ul {
+	border-left: 1px solid #eee;
+	float: right;
+	right: 0;
+	text-align: right;
+	left: auto;
+	border-right: none;
+}
+
+.navigation-main ul ul ul {
+	right: 100%;
+	left: auto;
+}
+
+/* Secondary navigation */
+.secondary-navigation {
+	float: left;
+	margin: 15px 0 0 30px;
+	text-align: left;
+}
+
+/* Small menu */
+
+@media screen and (max-width: 600px) {
+
+	.navigation-main ul ul ul {
+		right: 100%;
+		left: auto;
+	}
+
+	/* Secondary navigation */
+	.secondary-navigation {
+		float: left;
+		margin: 15px 0 0 30px;
+		text-align: left;
+	}
+
+}
+
+/* =Content
+----------------------------------------------- */
+
+.hotels-listing .attachment-room-thumbnail {
+	float: right;
+	margin: 5px 0 10px 15px;
+}
+
+.hotels-listing .entry-header,
+.hotels-listing .entry-content,
+.hotels-listing .entry-meta {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.hotels-listing.hotels_testimonial .entry-content:before {
+	right: 2%;
+	left: auto;
+}
+
+.hotels-listing.hotels_testimonial .entry-content:after {
+	left: 2%;
+	right: auto;
+}
+
+.hotels-listing .attachment-room-thumbnail {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.hotels-listing.thumbnail .entry-header,
+.hotels-listing.thumbnail .entry-content,
+.hotels-listing.thumbnail .entry-meta {
+	float: right;
+}
+
+.hotels-listing .entry-title {
+	float: right;
+}
+
+.hotels-listing .room-price {
+	float: left;
+}
+
+/* =Navigation
+----------------------------------------------- */
+
+[class*="navigation"] .previous {
+	float: right;
+}
+
+[class*="navigation"] .next {
+	float: left;
+	text-align: left;
+}
+
+/* =Comments
+----------------------------------------------- */
+
+.comment-list .comment-content li {
+	margin-right: 2.8em;
+	margin-left: auto;
+}
+
+.comment-list .avatar {
+	float: right;
+	margin: 0 0 10px 13px;
+}
+
+.comment-author {
+	margin-left: 10px;
+	margin-right: auto;
+}
+
+.comment-content {
+	clear: right;
+}
+
+/* =Widgets
+----------------------------------------------- */
+
+#masthead .widget-area {
+	float: left;
+}
+
+/* Reservation widget */
+
+#masthead .widget_reservations .widget-title,
+#masthead .widget_reservations .widgettitle {
+	padding: 5px 30px 5px 10px;
+}
+
+#masthead .widget_reservations .widgettitle {
+	padding-right: 10px;
+	padding-left: 30px;
+	text-align: left;
+}
+
+#masthead .widget_reservations .widget-title:after,
+#masthead .widget_reservations .widgettitle:after {
+	left: 10px;
+	right: auto;
+}
+
+#masthead .widget_reservations .widget-title:after {
+	left: auto;
+	right: 10px;
+}
+
+#masthead .widget_reservations .contact-form {
+	right: 0;
+	left: auto;
+}
+
+.widget_reservations .contact-form input[type="date"] {
+	padding-left: 17%;
+	padding-right: 0;
+}
+
+.widget_reservations .contact-form input[type="date"]:after {
+	left: 0;
+	right: auto;
+}
+
+/* Custom Menu widget */
+
+.widget_nav_menu ul ul {
+	margin-right: 15px;
+	margin-left: auto;
+}
+
+/* =Social Links
+----------------------------------------------- */
+
+.social-links {
+	float: left;
+}
+
+.social-links li {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+/* Media queries for responsive design
+--------------------------------------------- */
+
+@media screen and (max-width: 1240px) {
+	#page {
+		width: 92%;
+		margin: 0 2%;
+		padding: 0 2%;
+	}
+	.navigation-main {
+		width: 100%;
+	}
+	.secondary-navigation {
+		margin-left: 2%;
+		margin-right: 0;
+		width: 28%;
+	}
+
+	.home-widgets {
+		padding: 10px 2%;
+		width: 29%;
+	}
+
+	.blog #primary,
+	.archive #primary,
+	.three-column #primary,
+	.single-post #primary {
+		width: 78%;
+	}
+	.blog.three-column #primary,
+	.single-post.three-column #primary {
+		width: 56%;
+	}
+	.hotels-listing .attachment-room-thumbnail {
+		margin-left: 2%;
+		margin-right: 0;
+		width: 23%;
+	}
+	.hotels-listing.thumbnail .entry-header,
+	.hotels-listing.thumbnail .entry-content,
+	.hotels-listing.thumbnail .entry-meta {
+		width: 75%;
+	}
+
+	#content {
+		padding-left: 0;
+		padding-right: 23%;
+	}
+	.three-column #content {
+		padding-left: 0;
+		padding-right: 28%;
+	}
+
+	#secondary {
+		float: right;
+		margin-right: -100%;
+		margin-left: 3%;
+		width: 20%;
+	}
+	.three-column #secondary {
+		margin-left: 0;
+		margin-right: -78%;
+	}
+	.blog #secondary,
+	.archive #secondary,
+	.single-post #secondary {
+		margin: 0 2% 15px 0;
+	}
+
+	#tertiary {
+		margin-left: 0;
+		margin-right: 2%;
+		width: 20%;
+	}
+
+	.widget_reservations {
+		width: 100%;
+	}
+	#masthead .widget-area {
+		width: 20%;
+	}
+}
+
+/* --- iPad Portrait --- */
+@media screen and (max-width: 959px) {
+	#masthead hgroup {
+		width: 73%;
+	}
+	#masthead .widget-area {
+		margin-bottom: 0;
+		width: 25%;
+	}
+	.secondary-navigation {
+		margin: 0;
+		width: 25%;
+	}
+	.three-column #primary {
+		width: 100%;
+	}
+	.blog #primary,
+	.archive #primary,
+	.blog.three-column #primary,
+	.single-post #primary {
+		width: 73%;
+	}
+	#content,
+	.three-column #content {
+		padding-right: 27%;
+	}
+	.blog #content,
+	.archive #content,
+	.blog.three-column #content,
+	.single-post #content {
+		padding-right: 0;
+	}
+	.hentry .wp-post-image {
+		width: 100%;
+	}
+	.hotels-listing .attachment-room-thumbnail {
+		margin-right: 0;
+		margin-left: 2%;
+		width: 23%;
+	}
+	#secondary,
+	.three-column #secondary {
+		margin-right: -100%;
+		margin-left: 0;
+		width: 25%;
+	}
+	.blog #secondary,
+	.archive #secondary,
+	.single-post #secondary {
+		margin-right: 2%;
+		margin-left: 0;
+	}
+	#tertiary {
+		clear: right;
+		float: right;
+		margin-top: 0;
+		margin-right: 27%;
+		margin-left: 2%;
+		width: 73%;
+	}
+	.blog #tertiary,
+	.archive #tertiary {
+		clear: left;
+		float: left;
+		margin-right: 2%;
+		margin-left: 0;
+		width: 25%;
+	}
+}
+
+/* --- Smartphones and small Tablet PCs --- */
+@media screen and (max-width: 767px) {
+	#masthead,
+	#main,
+	#primary,
+	#secondary,
+	#colophon,
+	#featured-content.flexslider .slides .featured-hentry-wrap {
+		width: 100%;
+	}
+	#masthead hgroup {
+		width: 63%;
+	}
+	#masthead .widget-area {
+		margin-bottom: 0;
+		width: 35%;
+	}
+	.secondary-navigation {
+		margin: 0;
+		width: 35%;
+	}
+	#featured-content.flexslider .slides .hentry {
+		bottom: 2%;
+		max-width: 50%;
+	}
+	#primary,
+	.blog #primary,
+	.archive #primary,
+	.three-column #primary,
+	.blog.three-column #primary,
+	.single-post #primary,
+	.single-post.three-column #primary {
+		margin: 0 0 45px 0;
+		width: 100%;
+	}
+	#secondary,
+	.three-column #secondary,
+	.single-post #secondary,
+	#tertiary,
+	.blog #tertiary,
+	.archive #tertiary {
+		margin: 0;
+		width: 100%;
+	}
+	#content,
+	.three-column #content {
+		padding: 0;
+	}
+	.hotels-listing .attachment-room-thumbnail {
+		width: 28%;
+		margin-right: 0;
+		margin-left: 2%;
+	}
+	.hotels-listing.thumbnail .entry-header,
+	.hotels-listing.thumbnail .entry-content,
+	.hotels-listing.thumbnail .entry-meta {
+		width: 70%;
+	}
+	.widget #s {
+		padding: .5em 2%;
+		width: 96%;
+	}
+}
+
+/* --- Smartphones (portrait and landscape) --- */
+@media screen and (max-width : 600px) {
+	#masthead-wrap {
+		position: absolute;
+	}
+	#masthead {
+		padding: 1% 0;
+		position: relative;
+		width: 100%;
+		max-height: none;
+	}
+	#masthead hgroup {
+		float: none;
+		padding-bottom: 2%;
+		width: 75%;
+	}
+	#masthead .widget-area {
+		float: none;
+		margin-bottom: 0;
+		width: 100%;
+	}
+	#masthead .widget_reservations .widget-title,
+	#masthead .widget_reservations .widgettitle {
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+	#masthead .widget_reservations .widget-title:after,
+	#masthead .widget_reservations .widgettitle:after {
+		top: 13px;
+	}
+	.secondary-navigation {
+		display: none;
+	}
+
+	#featured-content {
+		margin-bottom: 15px;
+	}
+	#featured-content.flexslider .slides .featured-hentry-wrap {
+		display: none;
+	}
+	#featured-content.flexslider .slides .hentry {
+		max-width: 100%;
+		position: relative;
+			right: 0;
+			bottom: 0;
+	}
+	#featured-content h2 {
+		padding: .1em .5em .1em .5em;
+	}
+	.flex-control-paging {
+		display: none;
+	}
+
+	.home-widgets {
+		border: 0 none;
+		padding: 10px 3%;
+		width: 94%;
+	}
+	.home-widgets .widget {
+		margin-bottom: 15px;
+	}
+
+	.hotels-listing.thumbnail .entry-content,
+	.hotels-listing.thumbnail .entry-meta,
+	.three-column .hotels-listing.thumbnail .entry-content,
+	.three-column .hotels-listing.thumbnail .entry-meta {
+		width: 100%;
+	}
+	.hotels-listing.hotels_testimonial .entry-content:before {
+		right: 0;
+	}
+	.hotels-listing.hotels_testimonial .entry-content:after {
+		left: 0;
+	}
+
+	.site-info,
+	.social-links {
+		width: 100%;
+	}
+	.social-links li {
+		float: right;
+		margin: 0 0 0 5px;
+	}
+}

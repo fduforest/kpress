@@ -1,0 +1,1701 @@
+/*
+Theme Name: Stay
+Theme URI: http://theme.wordpress.com/themes/stay/
+Description: Designed with hotels, inns, and bed &amp; breakfasts in mind, Stay is the perfect theme for property owners. Take advantage of its Room and Testimonial post types, home page template, large imagery, and minimal layout to show off to potential guests.
+Version: 1.0.1
+Author: Automattic
+Author URI: http://automattic.com/
+License: GPL v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@font-face {
+	font-family: 'Genericons';
+	src: url('font/genericons-regular-webfont.eot');
+	src: url('font/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('font/genericons-regular-webfont.woff') format('woff'),
+		 url('font/genericons-regular-webfont.ttf') format('truetype'),
+		 url('font/genericons-regular-webfont.svg#genericonsregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.genericons {
+	font-family: 'Genericons';
+}
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #f6f6f6;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: center;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+	font-family: 'Gilda Display', serif;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5px;
+}
+
+/* Text elements */
+p {
+	margin: 0 0 15px;
+	line-height: 1.5em;
+}
+ul, ol {
+	margin: 0 0 15px 30px;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 15px;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 15px 15px;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 14px;
+	line-height: 1.6;
+	margin-bottom: 1em;
+	padding: 1em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 12px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid #ddd;
+	border-color: #ccc #ccc #bbb #ccc;
+	border-radius: 1px;
+	background: #eee;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 12px;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa #bbb;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow:    inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	box-shadow:         inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input::-webkit-calendar-picker-indicator{ /* hide webkit's date functionality, since it's duplicated by jQuery */
+    display: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="date"],
+textarea {
+	color: #666;
+	border: 1px solid #ddd;
+	border-radius: 1px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="date"] {
+	padding: 3px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+a {
+	color: #004178;
+	text-decoration: none;
+}
+a:visited {
+	color: #004178;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #337dbb;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin: 15px 15px 15px 0;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin: 15px 0 15px 15px;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 15px auto;
+}
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.wp-caption.aligncenter {
+	margin-top: 0;
+}
+
+/* Text meant only for screen readers */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+/* Clearing */
+.clear:before,
+.clear:after,
+[class*="content"]:before,
+[class*="content"]:after,
+[class*="site"]:before,
+[class*="site"]:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+[class*="content"]:after,
+[class*="site"]:after {
+	clear: both;
+}
+
+
+/* =Layout
+----------------------------------------------- */
+
+#page {
+	background: #f6f6f6;
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 1200px;
+}
+
+#masthead {
+	margin: 0 auto;
+	position: relative;
+}
+#masthead hgroup {
+	float: left;
+	padding: 20px 0 15px 0;
+	width: 50%;
+}
+.site-title {
+	font-family: 'Gilda Display', serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+.site-title a {
+	color: #262626;
+	text-decoration: none;
+}
+.site-description {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: .9em;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+}
+
+#main {
+}
+#content {
+}
+
+#featured-content {
+	border: none 0;
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0;
+}
+.featured-posts {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.featured {
+	position: relative;
+}
+.featured img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+.featured .hentry {
+	border: none 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+		right: 30px;
+		bottom: 30px;
+}
+.featured .entry-header {
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+.featured h2 {
+	background: #fff;
+	display: inline-block;
+	float: right;
+	padding: .25em 1em .25em 1.25em;
+	position: relative;
+}
+.featured h2:after {
+	content: '\f501';
+	font-family: 'Genericons';
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.featured h2 a {
+	color: #262626;
+	text-decoration: none;
+}
+#featured-content .flex-control-nav {
+	bottom: 30px;
+	left: 30px;
+	width: auto;
+}
+#featured-content .flex-control-paging li a {
+	border-radius: 0;
+	border: 2px solid #fff;
+}
+#home-widgets {
+	background-color: #fff;
+	margin: 0 0 15px 0;
+	padding: 15px 0;
+	overflow: hidden;
+}
+.home-widgets {
+	border-right: 1px solid #f6f6f6;
+	float: left;
+	padding: 10px 30px;
+	width: 330px;
+}
+.two .home-widgets {
+	width: 539px;
+}
+.one .home-widgets {
+	width: 1140px;
+}
+.home-widgets:last-child {
+	border-right: 0 none;
+}
+
+#primary {
+	float: left;
+	font-size: .9em;
+	line-height: 1.6em;
+	margin: 0 0 15px 0;
+	width: 100%;
+}
+.page-template-page-templateshome-page-php #primary {
+	margin: 0;
+	width: 100%;
+}
+.blog #primary,
+.archive #primary,
+.three-column #primary,
+.single-post #primary {
+	width: 920px;
+}
+.blog.three-column #primary,
+.single-post.three-column #primary {
+	width: 640px;
+}
+
+#content {
+	padding-left: 280px;
+}
+.blog #content,
+.archive #content,
+.single-post #content {
+	padding-left: 0;
+}
+.page-template-page-templateshome-page-php #content {
+	padding-left: 0;
+}
+
+#secondary {
+	float: left;
+	margin: 0 30px 15px -100%;
+	width: 250px;
+}
+.three-column #secondary {
+	margin-left: -920px;
+}
+.blog #secondary,
+.archive #secondary,
+.single-post #secondary {
+	margin: 0 0 15px 30px;
+}
+
+#tertiary {
+	float: left;
+	margin: 0 0 15px 30px;
+	width: 250px;
+}
+
+#colophon {
+	border-top: 1px solid #fff;
+	font-size: .8em;
+	margin: 15px auto;
+	padding: 15px 0;
+}
+.site-info {
+	float: left;
+	margin: 5px 0;
+	width: 50%;
+}
+
+
+/* =Menu
+----------------------------------------------- */
+
+.navigation-main {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	clear: both;
+	display: block;
+	margin-bottom: 15px;
+	text-align: center;
+	width: 1200px;
+}
+.navigation-main ul {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.navigation-main li {
+	display: inline-block;
+	position: relative;
+}
+.navigation-main a {
+	color: #262626;
+	display: block;
+	font-family: 'Gilda Display', serif;
+	font-size: .9em;
+	line-height: .9em;
+	padding: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.navigation-main a:hover {
+	background: #fff;
+}
+.navigation-main ul ul {
+	background: #fff;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	display: none;
+	float: left;
+	position: absolute;
+		top: 1.85em;
+		left: 0;
+	text-align: left;
+	z-index: 99999;
+}
+.navigation-main ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.navigation-main ul ul a {
+	line-height: 1.1em;
+	text-transform: none;
+	width: 200px;
+}
+.navigation-main ul ul li {
+}
+.navigation-main li:hover > a {
+	background: #fff;
+}
+.navigation-main ul ul :hover > a {
+}
+.navigation-main ul ul a:hover {
+	background-color: #fafafa;
+}
+.navigation-main ul li:hover > ul {
+	display: block;
+}
+.navigation-main li.current_page_item a,
+.navigation-main li.current-menu-item a {
+}
+
+/* Secondary navigation */
+.secondary-navigation {
+	float: right;
+	margin: 15px 30px 0 0;
+	text-align: right;
+	width: 320px;
+}
+.secondary-navigation ul {
+	list-style-type: none;
+}
+.secondary-navigation li {
+	display: inline-block;
+}
+.secondary-navigation li a {
+	color: #565656;
+	display: block;
+	font-size: .8em;
+	padding: 7px 5px 7px 5px;
+}
+.secondary-navigation li a:hover {
+	color: #262626;
+}
+.secondary-navigation ul ul {
+	display: none;
+}
+#mobile-top-nav-container {
+	display: none;
+}
+
+/* Small menu */
+.menu-toggle {
+	display: none;
+	cursor: pointer;
+}
+
+.main-small-navigation ul {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-small-navigation ul.nav-menu,
+	.main-small-navigation ul.menu {
+		display: block;
+		margin: 0;
+		padding: 10px 15px;
+	}
+
+	.navigation-main ul {
+		display: none;
+	}
+
+	#site-navigation {
+		border: 0 none;
+		position: absolute;
+			top: 15px;
+			right: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+	#site-navigation.main-small-navigation {
+		border-right: 1px solid #eee;
+		margin-right: -1px;
+	}
+	#site-navigation h1.menu-toggle {
+		color: #262626;
+		display: inline-block;
+		float: right;
+		margin: 0;
+		padding: 10px;
+		overflow: hidden;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		text-align: center;
+		text-decoration: none;
+	}
+	#site-navigation h1.menu-toggle.toggled-on {
+		background: #fff;
+	}
+	#site-navigation h1.menu-toggle:before {
+		content: '\f419';
+		display: block;
+		font-family: 'Genericons';
+	    font-size: 16px;
+	    -webkit-font-smoothing: antialiased;
+	    line-height: 24px;
+	}
+	#site-navigation.main-small-navigation .menu,
+	#site-navigation.main-small-navigation #primary-nav-container,
+	#site-navigation.main-small-navigation #mobile-top-nav-container {
+		background: #fff;
+		border-bottom: 1px solid #eee;
+		clear: both;
+		display: block;
+	}
+
+	.main-small-navigation ul,
+	.main-small-navigation ul ul {
+		list-style-type: none;
+	}
+}
+
+/* =Content
+----------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: .15em 0;
+	padding: .15em 0;
+}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+	font-size: 1.4em;
+}
+h3 {
+	font-size: 1.3em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5 {
+	font-size: 1.1em;
+}
+.hentry {
+	background-color: #fff;
+	margin-bottom: 15px;
+}
+.sticky {
+	background: #fafafa;
+	border: 1px solid #ddd;
+}
+.hentry .wp-post-image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.entry-header {
+	overflow: hidden;
+	padding: 15px;
+}
+.entry-title {
+	line-height: 1.7em;
+	margin: 0;
+	padding: 0;
+}
+.byline {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.entry-content,
+.entry-summary {
+	margin: 0 15px;
+}
+.entry-meta {
+	margin: 0 15px;
+	padding-bottom: 15px;
+}
+.entry-header .entry-meta {
+	margin: 0;
+	padding: 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 10px;
+}
+.edit-link {
+	display: block;
+}
+
+.hotels-listing {
+	background: #f6f6f6;
+	border-bottom: 1px solid #fff;
+	overflow: hidden;
+	margin: 0;
+	padding: 15px 3%;
+}
+.hotels-listing .attachment-room-thumbnail {
+	float: left;
+	margin: 5px 15px 10px 0;
+}
+.hotels-listing .entry-header,
+.hotels-listing .entry-content,
+.hotels-listing .entry-meta {
+	line-height: 2em;
+	margin-right: 0;
+	margin-left: 0;
+	width: 97%;
+}
+.hotels-listing.hotels_testimonial .entry-content {
+	font-style: italic;
+	padding: 0 10%;
+	position: relative;
+	width: 80%;
+}
+.hotels-listing.hotels_testimonial .entry-content .testimonial-cite {
+	font-style: normal;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+.hotels-listing.hotels_testimonial .entry-content .testimonial-cite:before {
+	content: '\002D';
+}
+.hotels-listing.hotels_testimonial .entry-content:before {
+	content: '\f106';
+	font-family: 'Genericons';
+	font-size: 32px;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+		left: 2%;
+		top: 0;
+}
+.hotels-listing.hotels_testimonial .entry-content:after {
+	content: '\f106';
+	font-family: 'Genericons';
+	font-size: 32px;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+		right: 2%;
+		top: 0;
+}
+.hotels-listing .attachment-room-thumbnail {
+	margin-right: 2%;
+	width: 28%;
+}
+.hotels-listing.thumbnail .entry-header,
+.hotels-listing.thumbnail .entry-content,
+.hotels-listing.thumbnail .entry-meta {
+	float: left;
+	width: 70%;
+}
+.hotels-listing .entry-header {
+	padding: 0 0 .5em 0;
+}
+.hotels-listing .entry-title {
+	float: left;
+}
+.hotels-listing .entry-title a {
+	color: #262626;
+	text-decoration: none;
+}
+.hotels-listing .room-price {
+	float: right;
+}
+.hotels-listing .entry-meta {
+	padding-bottom: 0;
+}
+
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+	height: auto;
+}
+.site-header img,
+.entry-content img,
+.comment-content img[height],
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+	max-width: 100%;
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #eee;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"],
+.wp-caption img[class*="size-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-content .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-content .gallery dd {
+	margin: 0;
+}
+.site-content .gallery-columns-4 .gallery-item {
+}
+.site-content .gallery-columns-4 .gallery-item img {
+}
+.site-content .tiled-gallery {
+	margin-bottom: 1.5px;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-content [class*="navigation"] {
+	margin: 1.5em 0 1.5em;
+	overflow: hidden;
+}
+[class*="navigation"] .previous {
+	float: left;
+	width: 50%;
+}
+[class*="navigation"] .next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/* =Comments
+----------------------------------------------- */
+
+#comments {
+	padding: 25px;
+}
+.bypostauthor {
+	background-color: #fff;
+}
+.comments-title {
+	font-size: 1.7em;
+	line-height: 1.3em;
+}
+.comment-list .published,
+.comment-list .edit-link,
+.comment-list .reply {
+	display: inline-block;
+	font-size: 1em;
+	font-style: italic;
+	line-height: 1.2em;
+}
+.comment-navigation {
+	margin-bottom: 1.6em;
+}
+.comment-list,
+.comment-list li {
+	list-style: none;
+	margin: 0;
+}
+.comment-list .comment-content li {
+	margin-left: 2.8em;
+	list-style-type: decimal;
+}
+.comment-list {
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 30px;
+}
+.comment-list li {
+	padding: 0;
+	border-top: 1px solid #e5e5e5;
+}
+.comment-list article.comment,
+.comment-list .pingback {
+	padding: 1%;
+}
+.comment-list .avatar {
+	float: left;
+	margin: 0 13px 10px 0;
+}
+.comment-meta {
+	margin: 0 0 2px 0;
+	font-size: 0.8em;
+	color: #bbb;
+	line-height: 1.7em;
+}
+.comment-meta .comment-author cite {
+	font-style: normal;
+	font-weight: 400;
+	color: #333;
+	font-size: 1em;
+}
+.comment-author {
+	margin-right: 10px;
+}
+.comment-meta a {
+	font-style: normal;
+	color: #777;
+	border-bottom: 1px solid #e5e5e5;
+}
+.comment-author a {
+	color: #333;
+}
+.comment-meta a:hover{
+	color: #000;
+	border-bottom: none;
+}
+.comments-closed {
+	padding: 10px 25px;
+	font-size: 1em;
+	color: #888;
+	background: #f5f5f5;
+}
+.comment-content {
+	font-size: 0.85em;
+	line-height: 1.9em;
+	clear: left;
+}
+.comment-content p { margin-bottom: 1em; }
+.comment-list .comment-content li {
+	border-top: none 0;
+	margin: 0;
+	padding: 0;
+}
+.comment-list .comment-content ul,
+.comment-list .comment-content ol {
+	margin-bottom: 1.6em;
+}
+.comment-list .comment-content li ul,
+.comment-list .comment-content li ol {
+	margin-bottom: 0.3em;
+}
+.comment-list blockquote,
+.comment-list blockquote blockquote blockquote {
+	font-size: 1em;
+}
+
+/* =Widgets
+----------------------------------------------- */
+
+#masthead .widget-area {
+	float: right;
+	margin: 15px 0;
+	width: 250px;
+}
+
+.widget {
+	font-size: .9em;
+	margin: 0 0 30px;
+	overflow: hidden;
+	position: relative;
+}
+#masthead .widget {
+	margin-bottom: 15px;
+	overflow: visible;
+}
+.widget-title {
+	border-bottom: 1px solid #fff;
+	font-size: 1.2em;
+	margin-bottom: .75em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search input[type="search"] {
+	border: 0 none;
+	padding: 4%;
+	width: 92%;
+}
+.widget_search .submit {
+	display: none;
+}
+
+/* Reservation widget */
+.widget_reservations {
+	background: #fff;
+	width: 250px;
+}
+#masthead .widget_reservations {
+	position: relative;
+}
+.widget_reservations .widget-title,
+.widget_reservations .widgettitle {
+	font-size: 1.1em;
+	margin: 0;
+	padding: 5px 10px;
+	position: relative;
+}
+#masthead .widget_reservations .widget-title,
+#masthead .widget_reservations .widgettitle {
+	padding: 5px 10px 5px 33px;
+}
+#masthead .widget_reservations .widgettitle {
+	padding-left: 10px;
+	padding-right: 30px;
+	text-align: right;
+}
+#masthead .widget_reservations .widget-title:after,
+#masthead .widget_reservations .widgettitle:after {
+	content: '\f502';
+	font-family: 'Genericons';
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+		top: 8px;
+		right: 10px;
+	vertical-align: middle;
+}
+#masthead .widget_reservations .widget-title:after {
+	right: auto;
+	left: 10px;
+}
+#masthead .widget_reservations .widget-title.toggle-on:after,
+#masthead .widget_reservations .widgettitle.toggle-on:after {
+	content: '\f500';
+	top: 1px;
+}
+.widget_reservations .contact-form {
+	border-top: 1px solid #f6f6f6;
+	font-size: .9em;
+	padding: 10px;
+}
+#masthead .widget_reservations .contact-form {
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	display: none;
+	padding: 4%;
+	position: absolute;
+		top: 34px;
+		left: 0;
+	width: 92%;
+	z-index: 1000;
+}
+.widget_reservations .contact-form label {
+	display: block;
+	font-size: 1em;
+	font-weight: 300;
+	line-height: 1.2em;
+	margin-bottom: 2px;
+}
+.widget_reservations .contact-form input[type="text"],
+.widget_reservations .contact-form input[type="email"],
+.widget_reservations .contact-form input[type="date"] {
+	margin-bottom: 10px;
+	padding: 5px 3px;
+	width: 94%;
+	max-width: 94%;
+}
+.widget_reservations .contact-form input[type="date"] {
+	padding-right: 17%;
+	position: relative;
+	width: 80%;
+}
+.widget_reservations .contact-form input[type="date"]:after {
+	content: '\f307';
+	display: block;
+	font-family: 'Genericons';
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+		top: 7px;
+		right: 0;
+	width: 20px;
+	height: 20px;
+
+}
+.widget_reservations .contact-form textarea {
+	height: 150px;
+	padding: 5px 3px;
+	width: 97%;
+}
+.widget_reservations .contact-submit {
+	margin: 0;
+	padding-bottom: 10px;
+}
+.widget_reservations .contact-form input[type="submit"] {
+	font-size: 1em;
+	padding: 10px 0;
+	width: 100%;
+}
+
+/* Custom Menu widget */
+.widget_nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+}
+.widget_nav_menu li {
+	list-style-type: none;
+}
+.widget_nav_menu a {
+	border-bottom: 1px solid #fff;
+	color: #262626;
+	display: block;
+	padding: 5px 0;
+	text-decoration: none;
+}
+.widget_nav_menu a:hover {
+	background-color: #fff;
+}
+.widget_nav_menu ul ul {
+	margin-left: 15px;
+}
+
+/* Calendary widget */
+#calendar_wrap {
+	border: 1px solid #fff;
+}
+.widget_calendar table {
+	background: #fff;
+	margin-bottom: 0;
+}
+.widget_calendar table caption {
+	font-size: 1.2em;
+	padding: .25em;
+}
+
+/* Home widget adjustments */
+.home-widgets .widget-title {
+	border-bottom: 1px solid #f6f6f6;
+}
+.home-widgets #calendar_wrap {
+	border: 1px solid #eee;
+}
+.home-widgets .widget_calendar table {
+	background: #eee;
+}
+
+/* =Social Links
+----------------------------------------------- */
+
+.social-links {
+	display: block;
+	float: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 50%;
+}
+.social-links li {
+	display: block;
+	float: right;
+	margin: 0 0 0 10px;
+	width: 30px;
+	height: 30px;
+}
+.social-links a {
+	background-color: #f6f6f6;
+	border-radius: 1px;
+	color: #f6f6f6;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	width: 30px;
+	height: 30px;
+}
+.social-links li a:hover {
+	background-color: #fff;
+}
+.social-links a:before {
+	color: #262626;
+	display: block;
+	font-family: 'Genericons';
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    padding: 3px 0;
+}
+.social-links a:hover:before {
+}
+.email-link a:before {
+	content: '\f410';
+}
+.facebook-link a:before {
+	content: '\f203';
+}
+.twitter-link a:before {
+	content: '\f202';
+}
+.google-link a:before {
+	content: '\f206';
+}
+.pinterest-link a:before {
+	content: '\f210';
+}
+.linkedin-link a:before {
+	content: '\f208';
+}
+.flickr-link a:before {
+	content: '\f211';
+}
+.github-link a:before {
+	content: '\f200';
+}
+.dribbble-link a:before {
+	content: '\f201';
+}
+.vimeo-link a:before {
+	content: '\f212';
+}
+.youtube-link a:before {
+	content: '\f213';
+}
+
+/* =Jetpack
+----------------------------------------------- */
+
+/* Infinite Scroll */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .navigation-paging, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+#infinite-handle span {
+	display: block;
+	text-align: center;
+}
+#infinite-handle span:hover {
+	background: #555;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/* Stats */
+img#wpstats {
+	display: block;
+	margin: -10px auto 0 auto;
+}
+
+/* Media queries for responsive design
+--------------------------------------------- */
+
+@media screen and (max-width: 1240px) {
+	#page {
+		width: 92%;
+		margin: 0 2%;
+		padding: 0 2%;
+	}
+	.navigation-main {
+		width: 100%;
+	}
+	.secondary-navigation {
+		margin-right: 2%;
+		width: 28%;
+	}
+
+	.home-widgets {
+		padding: 10px 2%;
+		width: 29%;
+	}
+
+	.blog #primary,
+	.archive #primary,
+	.three-column #primary,
+	.single-post #primary {
+		width: 78%;
+	}
+	.blog.three-column #primary,
+	.single-post.three-column #primary {
+		width: 56%;
+	}
+	.hotels-listing .attachment-room-thumbnail {
+		margin-right: 2%;
+		width: 23%;
+	}
+	.hotels-listing.thumbnail .entry-header,
+	.hotels-listing.thumbnail .entry-content,
+	.hotels-listing.thumbnail .entry-meta {
+		width: 75%;
+	}
+
+	#content {
+		padding-left: 23%;
+	}
+	.three-column #content {
+		padding-left: 28%;
+	}
+
+	#secondary {
+		float: left;
+		margin-right: 3%;
+		width: 20%;
+	}
+	.three-column #secondary {
+		margin-left: -78%;
+	}
+	.blog #secondary,
+	.archive #secondary,
+	.single-post #secondary {
+		margin: 0 0 15px 2%;
+	}
+
+	#tertiary {
+		margin-left: 2%;
+		width: 20%;
+	}
+
+	.widget_reservations {
+		width: 100%;
+	}
+	#masthead .widget-area {
+		width: 20%;
+	}
+}
+
+/* --- iPad Portrait --- */
+@media screen and (max-width: 959px) {
+	#masthead hgroup {
+		width: 73%;
+	}
+	#masthead .widget-area {
+		margin-bottom: 0;
+		width: 25%;
+	}
+	.secondary-navigation {
+		margin: 0;
+		width: 25%;
+	}
+	.three-column #primary {
+		width: 100%;
+	}
+	.blog #primary,
+	.archive #primary,
+	.blog.three-column #primary,
+	.single-post #primary {
+		width: 73%;
+	}
+	#content,
+	.three-column #content {
+		padding-left: 27%;
+	}
+	.blog #content,
+	.archive #content,
+	.blog.three-column #content,
+	.single-post #content {
+		padding-left: 0;
+	}
+	.hentry .wp-post-image {
+		width: 100%;
+	}
+	.hotels-listing .attachment-room-thumbnail {
+		margin-right: 2%;
+		width: 23%;
+	}
+	#secondary,
+	.three-column #secondary {
+		margin-left: -100%;
+		width: 25%;
+	}
+	.blog #secondary,
+	.archive #secondary,
+	.single-post #secondary {
+		margin-right: 0;
+		margin-left: 2%;
+	}
+	#tertiary {
+		clear: left;
+		float: left;
+		margin-top: 0;
+		margin-right: 2%;
+		margin-left: 27%;
+		width: 73%;
+	}
+	.blog #tertiary,
+	.archive #tertiary {
+		clear: right;
+		float: right;
+		margin-right: 0;
+		margin-left: 2%;
+		width: 25%;
+	}
+}
+
+/* --- Smartphones and small Tablet PCs --- */
+@media screen and (max-width: 767px) {
+	#masthead,
+	#main,
+	#primary,
+	#secondary,
+	#colophon,
+	#featured-content.flexslider .slides .featured-hentry-wrap {
+		width: 100%;
+	}
+	#masthead hgroup {
+		width: 63%;
+	}
+	#masthead .widget-area {
+		margin-bottom: 0;
+		width: 35%;
+	}
+	.secondary-navigation {
+		margin: 0;
+		width: 35%;
+	}
+	#featured-content.flexslider .slides .hentry {
+		bottom: 2%;
+		max-width: 50%;
+	}
+	#primary,
+	.blog #primary,
+	.archive #primary,
+	.three-column #primary,
+	.blog.three-column #primary,
+	.single-post #primary,
+	.single-post.three-column #primary {
+		margin: 0 0 45px 0;
+		width: 100%;
+	}
+	#secondary,
+	.three-column #secondary,
+	.single-post #secondary,
+	#tertiary,
+	.blog #tertiary,
+	.archive #tertiary {
+		margin: 0;
+		width: 100%;
+	}
+	#content,
+	.three-column #content {
+		padding: 0;
+	}
+	.hotels-listing .attachment-room-thumbnail {
+		width: 28%;
+		margin-right: 2%;
+	}
+	.hotels-listing.thumbnail .entry-header,
+	.hotels-listing.thumbnail .entry-content,
+	.hotels-listing.thumbnail .entry-meta {
+		width: 70%;
+	}
+	.widget #s {
+		padding: .5em 2%;
+		width: 96%;
+	}
+}
+
+/* --- Smartphones (portrait and landscape) --- */
+@media screen and (max-width : 600px) {
+	#masthead-wrap {
+		position: absolute;
+	}
+	#masthead {
+		padding: 1% 0;
+		position: relative;
+		width: 100%;
+		max-height: none;
+	}
+	#masthead hgroup {
+		float: none;
+		padding-bottom: 2%;
+		width: 75%;
+	}
+	#masthead .widget-area {
+		float: none;
+		margin-bottom: 0;
+		width: 100%;
+	}
+	#masthead .widget_reservations .widget-title,
+	#masthead .widget_reservations .widgettitle {
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+	#masthead .widget_reservations .widget-title:after,
+	#masthead .widget_reservations .widgettitle:after {
+		top: 13px;
+	}
+	.secondary-navigation {
+		display: none;
+	}
+
+	#featured-content {
+		margin-bottom: 15px;
+	}
+	#featured-content.flexslider .slides .featured-hentry-wrap {
+		display: none;
+	}
+	#featured-content.flexslider .slides .hentry {
+		max-width: 100%;
+		position: relative;
+			right: 0;
+			bottom: 0;
+	}
+	#featured-content h2 {
+		padding: .1em .5em .1em .5em;
+	}
+	.flex-control-paging {
+		display: none;
+	}
+
+	.home-widgets {
+		border: 0 none;
+		padding: 10px 3%;
+		width: 94%;
+	}
+	.home-widgets .widget {
+		margin-bottom: 15px;
+	}
+
+	.hotels-listing.thumbnail .entry-content,
+	.hotels-listing.thumbnail .entry-meta,
+	.three-column .hotels-listing.thumbnail .entry-content,
+	.three-column .hotels-listing.thumbnail .entry-meta {
+		width: 100%;
+	}
+	.hotels-listing.hotels_testimonial .entry-content:before {
+		left: 0;
+	}
+	.hotels-listing.hotels_testimonial .entry-content:after {
+		right: 0;
+	}
+
+	.site-info,
+	.social-links {
+		width: 100%;
+	}
+	.social-links li {
+		float: left;
+		margin: 0 5px 0 0;
+	}
+}
