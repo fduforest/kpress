@@ -7,3 +7,4 @@ readme.md
 .gitattributes
 .gitignore
 .gitmodules
+.DS_Store
