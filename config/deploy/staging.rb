@@ -3,8 +3,8 @@
 ############################################
 
 set :stage, :staging
-set :stage_url, "https://preprod.kpress.fr"
-server "92.222.17.245", user: "keynetic", roles: %w{web app db}
+set :stage_url, "vps238104.ovh.net"
+server "149.202.56.206", user: "deploy", roles: %w{web app db}
 set :deploy_to, "/var/www/kpress/preprod"
 
 ############################################

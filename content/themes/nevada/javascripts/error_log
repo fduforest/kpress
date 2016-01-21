@@ -1,5 +1,0 @@
-[16-Jan-2014 09:21:21 UTC] PHP Fatal error:  Call to undefined function add_action() in /home3/franswoa/public_html/wp-content/themes/nevada/javascripts/like.js.php on line 38
-[19-Jan-2014 13:42:59 UTC] PHP Fatal error:  Call to undefined function add_action() in /home3/franswoa/public_html/wp-content/themes/nevada/javascripts/like.js.php on line 38
-[19-Jan-2014 15:46:20 UTC] PHP Fatal error:  Call to undefined function add_action() in /home3/franswoa/public_html/wp-content/themes/nevada/javascripts/like.js.php on line 38
-[19-Jan-2014 15:47:21 UTC] PHP Fatal error:  Call to undefined function add_action() in /home3/franswoa/public_html/wp-content/themes/nevada/javascripts/like.js.php on line 38
-[19-Jan-2014 15:48:22 UTC] PHP Fatal error:  Call to undefined function add_action() in /home3/franswoa/public_html/wp-content/themes/nevada/javascripts/like.js.php on line 38
