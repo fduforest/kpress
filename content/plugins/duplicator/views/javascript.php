@@ -85,7 +85,7 @@ Duplicator.UI.AnimateProgressBar = function(id) {
 	function runAnimation($pb) {
 		$pb.css({ "padding-left": "0%", "padding-right": "90%" });
 		$pb.progressbar("option", "value", 100);
-		$pb.animate({ paddingLeft: "90%", paddingRight: "0%" }, 3500, "linear", function () { runAnimation($pb); });
+		$pb.animate({ paddingLeft: "90%", paddingRight: "0%" }, 3000, "linear", function () { runAnimation($pb); });
 	}
 }
 
@@ -118,6 +118,26 @@ jQuery(document).ready(function($) {
 			? $arrow.html('<i class="fa fa-caret-up"></i>')
 			: $arrow.html('<i class="fa fa-caret-down"></i>');
 	});
+	
+	//Look for tooltip data
+	$('i[data-tooltip!=""]').qtip({ 
+		content: {
+			attr: 'data-tooltip',
+			title: {
+				text: function() { return  $(this).attr('data-tooltip-title'); }
+			}
+		},
+		style: {
+			classes: 'qtip-light qtip-rounded qtip-shadow',
+			width: 500
+		},
+		 position: {
+			my: 'top left', 
+			at: 'bottom center'
+		}
+	});
+	
+	
 });	
 
 </script>

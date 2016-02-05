@@ -12,4 +12,5 @@ function theme_enqueue_styles() {
  wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 
 }
+add_filter( 'sanitize_file_name', 'remove_accents' );
 ?>

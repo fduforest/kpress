@@ -1,11 +1,9 @@
 /*
-Theme Name: Nevada Child
-Theme URI: http://www.unitedthemes.com
-Description: An Agency / Blog / Portfolio / Business Theme
-Version: 1.7
-Author: United Themes
-Author URI: http://www.unitedthemes.com
-Template: nevada
+Theme Name: stay-wpcom Child
+Description: Add links for SEO in header & sanitize function for special characters in filename 
+Version: 1.0
+Author: François Duforest
+Template: stay-wpcom
 */
 
-@import url("../nevada/style.css");  
+@import url("../stay-wpcom/style.css");  

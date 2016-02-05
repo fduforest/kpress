@@ -30,13 +30,15 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-	<span style="font-size: 10px;margin-left:60px">
-<h1 style="display: inline; font-size: 10px"><a href="http://www.la-ferme-aux-charmes.fr/tarifs-reservation-location-val-joly/">Location Val Joly (Nord 59)</a>, <a href="http://www.la-ferme-aux-charmes.fr/gite-ferme-nord/">Location Gîte Ferme Nord (59)</a></h1>, 
-<h1 style="display: inline; font-size: 10px"><a href="http://www.la-ferme-aux-charmes.fr/chambres-hotes-nord/"> location Chambres d'Hôtes Nord (59)</a></h1>.
-Découvrez le Nord-Pas de Calais, 
-<a href="http://www.la-ferme-aux-charmes.fr/parc-naturel-regional-avesnois/">le Parc de l'Avesnois</a>, 
-<a href="http://www.la-ferme-aux-charmes.fr/la-station-touristique-du-val-joly/">le Val Joly</a> 
-et Solre-le-Château avec notre <h1 style="display: inline; font-size: 10px">Maison d'Hôte</h1>.</span>
+<span style="font-size: 10px">
+	<h1 style="display: inline; font-size: 10px"><a href="/location-val-joly-tarifs-reservation">Location Val Joly (Nord 59)</a></h1>, 
+	<h1 style="display: inline; font-size: 10px"><a href="/location-gite-val-joly-ferme">Location Gîte Val Joly Ferme</a></h1>, 
+	<h1 style="display: inline; font-size: 10px"><a href="/location-chambres-hotes-val-joly"> Location Chambres d'Hôtes Val Joly</a></h1>. 
+	Découvrez le Nord-Pas de Calais, 
+	<a href="/parc-naturel-regional-avesnois">le Parc de l'Avesnois</a>, 
+	<a href="/la-station-touristique-du-val-joly">le Val Joly</a> 
+	et Solre-le-Château avec notre <h1 style="display: inline; font-size: 10px"><a href="/location-maison-hotes-val-joly"> Maison d'hôtes de charme</a></h1>.
+</span>
 		<hgroup>
 		
 			<?php

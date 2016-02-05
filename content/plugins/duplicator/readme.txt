@@ -1,43 +1,43 @@
 === Duplicator ===
-Contributors: corylamleorg
+Contributors: corylamleorg, bobriley
 Donate link: www.lifeinthegrid.com/partner
 Tags: backup, restore, move, migrate, localhost, synchronize, duplicate, clone, automate, niche  
-Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 0.5.6
+Requires at least: 3.9
+Tested up to: 4.4.1
+Stable tag: 1.1.2
 License: GPLv2
 
-Duplicate, clone, backup, move and transfer an entire site from one location to another.
-
+Duplicate, clone, backup, move and transfer an entire site from one location to another. 
 
 == Description ==
 
-> The Duplicator gives WordPress administrators the ability to migrate, copy or clone a site from one location to another. The plugin also serves as a simple backup utility.    The Duplicator supports both serialized and base64 serialized string replacement.  If you need to move WordPress or backup WordPress this plugin can help simplify the process. For complete details visit [lifeinthegrid.com](http://lifeinthegrid.com/). 
+> The Duplicator gives WordPress administrators the ability to migrate, copy or clone a site from one location to another. The plugin also serves as a simple backup utility.    The Duplicator supports both serialized and base64 serialized string replacement.  If you need to move WordPress or backup WordPress this plugin can help simplify the process. For complete details visit [lifeinthegrid.com](http://lifeinthegrid.com/).  
 
 = Quick Video Demo =
 http://www.youtube.com/watch?v=yZ7pHmR9JC8
 
-= Disclaimer =
- This plugin does require above average technical knowledge.  If you plan to move WordPress or backup WordPress please use it at your own risk and do not forget to back up your files and databases beforehand with other backup system.  Please do not attempt to use the plugin if you're new to WordPress or have a limited technical background.  Please seek out professional help if your in question of anything.  If you need to move WordPress or backup WordPress and you don't have a firm grasp on using WordPress then you can get additional help from the Duplicator [resources page](http://lifeinthegrid.com/labs/duplicator/) .
+= Admins/Developers/Designers =
+ This tool is great to move or backup Wordpress sites and for pulling production sites down to your local machine for testing and validation. It also works good for developing locally and then pushing up to a production server for site releases/updates or just demoing a site.
 
-= Developers =
- This tool is great to move WordPress or backup Wordpress sites and for pulling a production site down onto your local machine for testing and validation. It also works good for developing locally and then pushing up to a production server for a first time site release.
+= Duplicator Pro =
+Take Duplicator to the next level with the [premium version](http://snapcreek.com/duplicator?wpo-premium) of the plugin.  With professional features like, scheduling, cloud storage to Dropbox, Google Drive, FTP and a long list of other enhancements.  For a full breakdown of the features found in the professional version checkout the [comparison page](https://snapcreek.com/duplicator/comparison?wpo-compare) .
 
 = Please Note =
-This project is currently in Beta, the underlying logic to backup WordPress, move WordPress and transfer WordPress are very complex. It's impossible to know how each system is setup; this is why your feedback is important to us.  Thanks for helping us to make WordPress the best blogging platform in the world.
+The underlying logic to backup WordPress, move WordPress and transfer WordPress are very complex. It's impossible to know how each system is setup; this is why your feedback is important to us.  Thanks for helping us to make WordPress the best blogging platform in the world.
+
+= Disclaimer =
+ This plugin does require some technical knowledge.  If you plan to move WordPress or backup WordPress please use it at your own risk and do not forget to back up your files and databases beforehand.  If you're new to WordPress or have a very limited technical background you may consider seeking out professional help your first time using the plugin.  If you need to move or backup WordPress and would like additional help please visit the Duplicator [resources page](http://lifeinthegrid.com/labs/duplicator/) .
+
+
 
 = Active Contributors =
 <li>[Paal Joachim Romdahl](http://www.easywebdesigntutorials.com) (Training)</li>
 <li>[Hans-M. Herbrand](http://www.web266.de) (German) </li>
 <li>[Nicolas Richer](http://nicolasricher.fr) (French)</li>
 
-= Other Contributors =
-<li>[Emilio De Fez](http://www.canaryas.com) (Spanish) </li>
-<li>[Marco Andrei Kichalowsky](http://www.arsnovasolucoes.com) (Portuguese)</li>
-Jonathan Foote, Tomas Gurny, Aaron Crawford
-
 = Donate =
 Enjoy using *Duplicator*? Please consider [making a donation](http://lifeinthegrid.com/partner/) to support the project's continued development.
+
 
 
 

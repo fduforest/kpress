@@ -2,7 +2,7 @@
 
 
 abstract class WPCOM_JSON_API_Comment_Endpoint extends WPCOM_JSON_API_Endpoint {
-	var $comment_object_format = array(
+	public $comment_object_format = array(
 		// explicitly document and cast all output
 		'ID'        => '(int) The comment ID.',
 		'post'      => "(object>post_reference) A reference to the comment's post.",
@@ -28,7 +28,7 @@ abstract class WPCOM_JSON_API_Comment_Endpoint extends WPCOM_JSON_API_Endpoint {
 		'meta' => '(object) Meta data',
 	);
 
-	// var $response_format =& $this->comment_object_format;
+	// public $response_format =& $this->comment_object_format;
 
 	function __construct( $args ) {
 		if ( !$this->response_format ) {
@@ -66,6 +66,9 @@ abstract class WPCOM_JSON_API_Comment_Endpoint extends WPCOM_JSON_API_Endpoint {
 
 			$GLOBALS['post'] = $post;
 			$comment         = get_comment_to_edit( $comment->comment_ID );
+			foreach ( array( 'comment_author', 'comment_author_email', 'comment_author_url' ) as $field ) {
+				$comment->$field = htmlspecialchars_decode( $comment->$field, ENT_QUOTES );
+			}
 			break;
 		case 'display' :
 			if ( 'approved' !== $status ) {
@@ -163,12 +166,12 @@ abstract class WPCOM_JSON_API_Comment_Endpoint extends WPCOM_JSON_API_Endpoint {
 				break;
 			case 'like_count' :
 				if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-					$return[ $key ] = (int) $this->api->comment_like_count( $blog_id, $post->ID, $comment->comment_ID );
+					$response[ $key ] = (int) $this->api->comment_like_count( $blog_id, $post->ID, $comment->comment_ID );
 				}
 				break;
 			case 'i_like' :
 				if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-					$return[ $key ] = (bool) Likes::comment_like_current_user_likes( $blog_id, $comment->comment_ID );
+					$response[ $key ] = (bool) Likes::comment_like_current_user_likes( $blog_id, $comment->comment_ID );
 				}
 				break;
 			case 'meta' :

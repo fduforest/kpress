@@ -44,6 +44,8 @@ class DUP_Package {
 	public $Runtime;
 	public $ExeSize;
 	public $ZipSize;
+	public $Status;
+	public $WPUser;
 	//Objects
 	public $Archive;
 	public $Installer;
@@ -82,26 +84,41 @@ class DUP_Package {
 
 		//SERVER
 		$srv = DUP_Server::GetChecks();
-		
-		$report['SRV']['PHPServer']		= $srv['CHK-SRV-100'];
-		$report['SRV']['WPSettings']	= $srv['CHK-SRV-101'];
-		$report['SRV']['WebServer']		= $srv['CHK-SRV-102'];
+		$report['SRV']['WEB']['ALL']	  = $srv['SRV']['WEB']['ALL'];
+		$report['SRV']['WEB']['model']	  = $srv['SRV']['WEB']['model'];
+
+		$report['SRV']['PHP']['ALL']	  = $srv['SRV']['PHP']['ALL'];
+		$report['SRV']['PHP']['openbase'] = $srv['SRV']['PHP']['openbase'];
+		$report['SRV']['PHP']['maxtime']  = $srv['SRV']['PHP']['maxtime'];
+		$report['SRV']['PHP']['mysqli']   = $srv['SRV']['PHP']['mysqli'];
+
+		$report['SRV']['WP']['ALL']		  = $srv['SRV']['WP']['ALL'];
+		$report['SRV']['WP']['version']	  = $srv['SRV']['WP']['version'];
+		$report['SRV']['WP']['core']	  = $srv['SRV']['WP']['core'];
+		$report['SRV']['WP']['cache']	  = $srv['SRV']['WP']['cache'];
 		
 		//FILES
 		$this->Archive->Stats();
-		$report['ARC']['Size']				= DUP_Util::ByteSize($this->Archive->Size)  or "unknown";
-		$report['ARC']['DirCount']			= number_format(count($this->Archive->Dirs));
-		$report['ARC']['FileCount']			= number_format(count($this->Archive->Files));
-		$report['ARC']['LinkCount']			= number_format(count($this->Archive->Links));
-		$report['ARC']['WarnFileName']		= is_array($this->Archive->WarnFileName) ? $this->Archive->WarnFileName : "unknown";
-		$report['ARC']['WarnFileSize']		= is_array($this->Archive->WarnFileSize)  ? $this->Archive->WarnFileSize  : "unknown";
-		$report['ARC']['Status']['Size']	= ($this->Archive->Size > DUPLICATOR_SCAN_SITE) ? 'Warn' : 'Good';
-		$report['ARC']['Status']['Names']	= count($this->Archive->WarnFileName) ? 'Warn' : 'Good';
-		$report['ARC']['Status']['Big']		= count($this->Archive->WarnFileSize)  ? 'Warn' : 'Good';
+		$dirCount = count($this->Archive->Dirs); 
+		$fileCount = count($this->Archive->Files);
+		$fullCount = $dirCount + $fileCount;
+		
+		$report['ARC']['Size']		 = DUP_Util::ByteSize($this->Archive->Size)  or "unknown";
+		$report['ARC']['DirCount']	 = number_format($dirCount);
+		$report['ARC']['FileCount']	 = number_format($fileCount);
+		$report['ARC']['FullCount']	 = number_format($fullCount);
+		
+		$report['ARC']['FilterInfo']['Dirs'] = $this->Archive->FilterInfo->Dirs;
+		$report['ARC']['FilterInfo']['Files'] = $this->Archive->FilterInfo->Files;
+		$report['ARC']['FilterInfo']['Exts'] = $this->Archive->FilterInfo->Exts;
+				
+		$report['ARC']['Status']['Size'] = ($this->Archive->Size > DUPLICATOR_SCAN_SITE) ? 'Warn' : 'Good';
+		$report['ARC']['Status']['Names'] = (count($this->Archive->FilterInfo->Files->Warning) + count($this->Archive->FilterInfo->Dirs->Warning))  ? 'Warn' : 'Good';
+		$report['ARC']['Status']['Big'] = count($this->Archive->FilterInfo->Files->Size) ? 'Warn' : 'Good';
+		
 		$report['ARC']['Dirs']				= $this->Archive->Dirs;
 		$report['ARC']['Files']				= $this->Archive->Files;
-		$report['ARC']['OmitFiles']			= $this->Archive->OmitFiles;
-		$report['ARC']['OmitDirs']			= $this->Archive->OmitDirs;
+
 		
 		//DATABASE
 		$db = $this->Database->Stats();
@@ -111,6 +128,19 @@ class DUP_Package {
 		$report['DB']['TableCount']	= $db['TableCount']					or "unknown";
 		$report['DB']['TableList']	= $db['TableList']					or "unknown";
 		
+		$warnings = array($report['SRV']['WEB']['ALL'],  
+						  $report['SRV']['PHP']['ALL'], 
+						  $report['SRV']['WP']['ALL'], 
+						  $report['ARC']['Status']['Size'], 
+						  $report['ARC']['Status']['Names'], 
+						  $report['ARC']['Status']['Big'], 
+						  $db['Status']['Size'],
+						  $db['Status']['Rows']);
+		
+		$warn_counts = array_count_values($warnings);	
+
+		$report['RPT']['Warnings'] = $warn_counts['Warn'];
+		$report['RPT']['Success']  = $warn_counts['Good'];
 		$report['RPT']['ScanTime'] = DUP_Util::ElapsedTime(DUP_Util::GetMicrotime(), $timerStart);
 		$fp = fopen(DUPLICATOR_SSDIR_PATH_TMP . "/{$this->ScanFile}", 'w');
 		fwrite($fp, json_encode($report));
@@ -134,6 +164,7 @@ class DUP_Package {
 		$this->Archive->File	  = "{$this->NameHash}_archive.zip";
 		$this->Installer->File    = "{$this->NameHash}_installer.php";
 		$this->Database->File     = "{$this->NameHash}_database.sql";
+		$this->WPUser			  = isset($current_user->user_login) ? $current_user->user_login : 'unknown';
 		
 		//START LOGGING
 		DUP_Log::Open($this->NameHash);
@@ -151,9 +182,10 @@ class DUP_Package {
 		$info .= "PHP INFO:\t" . phpversion() . ' | ' . 'SAPI: ' . php_sapi_name() . "\n";
 		$info .= "SERVER:\t\t{$_SERVER['SERVER_SOFTWARE']} \n";
 		$info .= "PHP TIME LIMIT: {$php_max_time} \n";
-		$info .= "PHP MAX MEMORY: {$php_max_memory}";
+		$info .= "PHP MAX MEMORY: {$php_max_memory} \n";
+		$info .= "MEMORY STACK: " . DUP_Server::GetPHPMemory();
 		DUP_Log::Info($info);
-		unset($info);
+		$info = null;
 		
 		//CREATE DB RECORD
 		$packageObj = serialize($this);
@@ -182,21 +214,36 @@ class DUP_Package {
 		}
 
 		//START BUILD
-		//PHPs serialze method will return the object but the ID above is not passed
+		//PHPs serialze method will return the object, but the ID above is not passed
 		//for one reason or another so passing the object back in seems to do the trick
 		$this->Database->Build($this);
 		$this->Archive->Build($this);
 		$this->Installer->Build($this);
 
-		//VALIDATE FILE SIZE
+		
+		//INTEGRITY CHECKS
+		DUP_Log::Info("\n********************************************************************************");
+		DUP_Log::Info("INTEGRITY CHECKS:");
+		DUP_Log::Info("********************************************************************************");
 		$dbSizeRead	 = DUP_Util::ByteSize($this->Database->Size);
 		$zipSizeRead = DUP_Util::ByteSize($this->Archive->Size);
 		$exeSizeRead = DUP_Util::ByteSize($this->Installer->Size);
+
+		DUP_Log::Info("SQL File: {$dbSizeRead}");
+		DUP_Log::Info("Installer File: {$exeSizeRead}");
+		DUP_Log::Info("Archive File: {$zipSizeRead} ");
+		
 		if ( !($this->Archive->Size && $this->Database->Size && $this->Installer->Size)) {
 			DUP_Log::Error("A required file contains zero bytes.", "Archive Size: {$zipSizeRead} | SQL Size: {$dbSizeRead} | Installer Size: {$exeSizeRead}");
 		}
+		
+		//Validate SQL files completed
+		$sql_tmp_path = DUP_UTIL::SafePath(DUPLICATOR_SSDIR_PATH_TMP . '/'. $this->Database->File);
+		$sql_complete_txt = DUP_Util::TailFile($sql_tmp_path, 3);
+		if (! strstr($sql_complete_txt, 'DUPLICATOR_MYSQLDUMP_EOF')) {
+			DUP_Log::Error("ERROR: SQL file not complete.  The end of file marker was not found.  Please try to re-create the package.");
+		}
 
-		$this->SetStatus(DUP_PackageStatus::COMPLETE);
 		$timerEnd = DUP_Util::GetMicrotime();
 		$timerSum = DUP_Util::ElapsedTime($timerEnd, $timerStart);
 		
@@ -206,15 +253,17 @@ class DUP_Package {
 		
 		$this->buildCleanup();
 		
-		$info  = "\n********************************************************************************\n";
+		//FINAL REPORT
+		$info = "\n********************************************************************************\n";
 		$info .= "RECORD ID:[{$this->ID}]\n";
-		$info .= "FILE SIZE: Archive:{$zipSizeRead} | SQL:{$dbSizeRead} | Installer:{$exeSizeRead}\n";
 		$info .= "TOTAL PROCESS RUNTIME: {$timerSum}\n";
+		$info .= "PEAK PHP MEMORY USED: " . DUP_Server::GetPHPMemory(true) . "\n";
 		$info .= "DONE PROCESSING => {$this->Name} " . @date("Y-m-d H:i:s") . "\n";
-		$info .= "********************************************************************************\n";
+	
 		DUP_Log::Info($info);
 		DUP_Log::Close();
 		
+		$this->SetStatus(DUP_PackageStatus::COMPLETE);
 		return $this;
 	}
 	
@@ -233,9 +282,10 @@ class DUP_Package {
 			$name = substr(sanitize_file_name($name), 0 , 40);
 			$name = str_replace($name_chars, '', $name);
 
-			$filter_dirs   = isset($post['filter-dirs']) ? $this->parseDirectoryFilter($post['filter-dirs']) : '';
-			$filter_exts   = isset($post['filter-exts']) ? $this->parseExtensionFilter($post['filter-exts']) : '';
-			$tablelist     = isset($post['dbtables'])    ? implode(',', $post['dbtables']) : '';
+			$filter_dirs	= isset($post['filter-dirs']) ? $this->parseDirectoryFilter($post['filter-dirs']) : '';
+			$filter_exts	= isset($post['filter-exts']) ? $this->parseExtensionFilter($post['filter-exts']) : '';
+			$tablelist		= isset($post['dbtables'])    ? implode(',', $post['dbtables']) : '';
+			$compatlist		= isset($post['dbcompat'])    ? implode(',', $post['dbcompat']) : '';
 
 			//PACKAGE
 			$this->Version		= DUPLICATOR_VERSION;
@@ -251,6 +301,7 @@ class DUP_Package {
 			$this->Archive->FilterExts		= str_replace(array('.' ,' '), "", esc_html($filter_exts));
 			//INSTALLER
 			$this->Installer->OptsDBHost		= esc_html($post['dbhost']);
+			$this->Installer->OptsDBPort		= esc_html($post['dbport']);
 			$this->Installer->OptsDBName		= esc_html($post['dbname']);
 			$this->Installer->OptsDBUser		= esc_html($post['dbuser']);
 			$this->Installer->OptsSSLAdmin		= isset($post['ssl-admin'])		? 1 : 0;
@@ -261,6 +312,7 @@ class DUP_Package {
 			//DATABASE
 			$this->Database->FilterOn		= isset($post['dbfilter-on'])   ? 1 : 0;
 			$this->Database->FilterTables	= esc_html($tablelist);
+			$this->Database->Compatible  = $compatlist;
 
 			update_option(self::OPT_ACTIVE, $this);
 		}
@@ -346,6 +398,26 @@ class DUP_Package {
 		return $obj;
 	}
 	
+	/**
+	* Gets the Package by ID
+	* @see DUP_Package::GetByID
+	* @return DUP_Package
+	*/
+	public static function GetByID($id) {
+		
+		global $wpdb;
+		$obj = new DUP_Package();
+		
+		$row = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM `{$wpdb->prefix}duplicator_packages` WHERE ID = %s", $id ) );
+		if (is_object($row)) {
+			$obj =  @unserialize($row->package);
+			$obj->Status = $row->status;
+		}
+		//Incase unserilaize fails
+		$obj = (is_object($obj)) ? $obj : null;
+		return $obj;
+	}
+	
 	/** 
 	*  Creates a default name
 	*  @return string   A default packagename
@@ -383,32 +455,36 @@ class DUP_Package {
 				}
 			}
 		}
-		
 	}
 	
 	private function buildCleanup() {
 		
-		$files   = glob(DUPLICATOR_SSDIR_PATH_TMP . "/{{$this->NameHash}*}", GLOB_BRACE | GLOB_NOSORT);
+		$files = DUP_Util::ListFiles(DUPLICATOR_SSDIR_PATH_TMP);
 		$newPath = DUPLICATOR_SSDIR_PATH;
 		
 		if (function_exists('rename')) {
 			foreach($files as $file){
 				$name = basename($file);
-				rename($file,"{$newPath}/{$name}");
+				if (strstr($name, $this->NameHash)) {
+					rename($file,"{$newPath}/{$name}");
+				}
 			}
 		} else {
 			foreach($files as $file){
 				$name = basename($file);
-				copy($file,"{$newPath}/{$name}");
-				unlink($file);
+				if (strstr($name, $this->NameHash)) {	
+					copy($file,"{$newPath}/{$name}");
+					unlink($file);
+				}
 			}
 		}
 	}
 	
-	
 	private function parseDirectoryFilter($dirs = "") {
+		$dirs = str_replace(array("\n", "\t", "\r"), '', $dirs);
 		$filter_dirs = "";
-		foreach (explode(";", $dirs) as $val) {
+		$dir_array = array_unique(explode(";", $dirs));
+		foreach ($dir_array as $val) {
 			if (strlen($val) >= 2) {
 				$filter_dirs .= DUP_Util::SafePath(trim(rtrim($val, "/\\"))) . ";";
 			}
