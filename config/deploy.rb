@@ -11,7 +11,9 @@ require './config/slack'
 set :wp_user, "root" # The admin username
 set :wp_email, "francois.duforest@gmail.com" # The admin email address
 set :wp_sitename, "kpress" # The site title
-set :wp_localurl, "http://kpress.local" # Your local environment URL
+set :wp_localurl, "kpress.local" # Your local environment URL
+set :wp_site1_localurl, "la-ferme-aux-charmes.local" # Your 1st site local URL
+set :wp_site2_localurl, "location-touquet.local" # Your 2nd site local URL
 
 ############################################
 # Setup project
