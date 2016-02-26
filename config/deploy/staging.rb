@@ -3,7 +3,9 @@
 ############################################
 
 set :stage, :staging
-set :stage_url, "vps238104.ovh.net"
+set :stage_url, "kpress.ovh"
+set :site1_url, "la-ferme-aux-charmes.ovh"
+set :site2_url, "location-touquet.ovh"
 server "149.202.56.206", user: "deploy", roles: %w{web app db}
 set :deploy_to, "/var/www/kpress/preprod"
 

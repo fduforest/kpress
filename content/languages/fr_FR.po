@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Development (4.4.x) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-01-28 16:37:34+0000\n"
+"PO-Revision-Date: 2016-02-11 10:20:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1156,10 +1156,6 @@ msgstr "Barre d'outils en ligne (quand une image, un lien ou un aperçu est sél
 msgid "Allow link notifications from other blogs (pingbacks and trackbacks) on new articles"
 msgstr "Autoriser les liens de notification d'autres blogs (pings et rétroliens) sur les nouveaux articles"
 
-#: wp-includes/widgets/class-wp-widget-text.php:107
-msgid "Content:"
-msgstr "Contient&nbsp;:"
-
 #: wp-includes/class-wp-editor.php:1051
 msgid "Ctrl + letter:"
 msgstr "Ctrl + lettre :"
@@ -1183,6 +1179,10 @@ msgstr "Raccourcis par défaut,"
 #: wp-includes/class-wp-editor.php:1042
 msgid "Additional shortcuts,"
 msgstr "Raccourcis supplémentaires,"
+
+#: wp-includes/widgets/class-wp-widget-text.php:107
+msgid "Content:"
+msgstr "Contenu&nbsp;:"
 
 #: wp-includes/class-wp-customize-section.php:236
 #: wp-includes/customize/class-wp-customize-themes-section.php:55

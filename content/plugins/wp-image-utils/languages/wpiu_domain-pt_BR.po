@@ -1,0 +1,280 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Image Utils 0.2.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-image-utils\n"
+"POT-Creation-Date: 2014-07-11 09:33+0100\n"
+"PO-Revision-Date: 2014-07-11 09:33+0100\n"
+"Last-Translator: Henri Benoit <henri.benoit@gmail.com>\n"
+"Language-Team: valdirljr\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.6.6\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/wp-image-utils.php:273
+msgid "Featured Image"
+msgstr "Imagem Destacada"
+
+#: classes/wp-image-utils.php:309 classes/wp-image-utils.php:310
+#: classes/wp-image-utils.php:405 classes/wp-image-utils.php:441
+msgid "Fix name"
+msgstr "Corrigir nome"
+
+#: classes/wp-image-utils.php:311 classes/wp-image-utils.php:312
+#: classes/wp-image-utils.php:408 classes/wp-image-utils.php:450
+msgid "Regenerate thumbnails"
+msgstr "Regenera as miniaturas"
+
+#: classes/wp-image-utils.php:423 classes/wp-image-utils.php:424
+#: views/wpiu-tools/page-fi-tools.php:3 views/wpiu-tools/page-fi-tools.php:107
+msgid "Bulk Feature Images"
+msgstr "Imagem destacada em massa"
+
+#: classes/wp-image-utils.php:555
+#, php-format
+msgid "Updated 1 post"
+msgid_plural "Updated %s posts"
+msgstr[0] "Atualizado 1 post"
+msgstr[1] "Atualizados %s posts"
+
+#: classes/wpiu-image-table.php:39
+msgid "ID"
+msgstr "ID"
+
+#: classes/wpiu-image-table.php:40
+msgid "Title"
+msgstr "Título"
+
+#: classes/wpiu-settings.php:212
+msgid "Help"
+msgstr "Ajuda"
+
+#: classes/wpiu-settings.php:213
+msgid "Settings"
+msgstr "Configurações"
+
+#: classes/wpiu-settings.php:226 views/wpiu-settings/page-settings.php:3
+#, php-format
+msgid "%s Settings"
+msgstr "%s Configurações"
+
+#: classes/wpiu-settings.php:245
+msgid "Access denied."
+msgstr "Acesso negado."
+
+#: classes/wpiu-settings.php:291
+msgid "File renaming on upload"
+msgstr "Renomear arquivos no upload"
+
+#: classes/wpiu-settings.php:293
+msgid "Remove accents"
+msgstr "Remover acentos"
+
+#: classes/wpiu-settings.php:294
+msgid "Remove special characters"
+msgstr "Remover caracteres epeciais"
+
+#: classes/wpiu-settings.php:295
+msgid "Removes non-ascii characters"
+msgstr "Remove caracteres não-ASCII"
+
+#: classes/wpiu-settings.php:296
+msgid "Convert filename to lowercase"
+msgstr "Converter nome do arquivo para minúsculas"
+
+#: classes/wpiu-settings.php:297
+msgid "Replace base name by MD5"
+msgstr "Substitua nome base por MD5"
+
+#: classes/wpiu-settings.php:298
+msgid "Add post slug to filename"
+msgstr "Adicionar apelido do post ao nome do arquivo"
+
+#: classes/wpiu-settings.php:299
+msgid "Add current date to filename"
+msgstr "Adicionar data atual para arquivo"
+
+#: classes/wpiu-settings.php:300
+msgid "Add site URL to filename"
+msgstr "Adicionar URL do site ao nome de arquivo"
+
+#: classes/wpiu-settings.php:301
+msgid "Remove custom port number"
+msgstr "Remover número de porta personalizado"
+
+#: classes/wpiu-settings.php:302
+msgid "Only domain"
+msgstr "Somente domínio"
+
+#: classes/wpiu-settings.php:303
+msgid "Remove TLDs"
+msgstr "Remover TLDs"
+
+#: classes/wpiu-settings.php:304
+msgid "TLDs to remove"
+msgstr "Remover estas TLDs "
+
+#: classes/wpiu-settings.php:305
+msgid "Extensions of files to rename"
+msgstr "Extensões de arquivos para renomear"
+
+#: classes/wpiu-settings.php:310
+msgid "Featured image"
+msgstr "Imagem destacada"
+
+#: classes/wpiu-settings.php:312
+msgid "Feature first image in post on save"
+msgstr "Usar a primeira imagem no post como imagem destacada ao salvar"
+
+#: classes/wpiu-settings.php:313 views/wpiu-tools/page-fi-tools.php:12
+msgid "Categories"
+msgstr "Categorias"
+
+#: classes/wpiu-settings.php:314 views/wpiu-tools/page-fi-tools.php:32
+msgid "Tags"
+msgstr "Tags"
+
+#: classes/wpiu-settings.php:315 views/wpiu-tools/page-fi-tools.php:52
+msgid "Authors"
+msgstr "Autores"
+
+#: classes/wpiu-settings.php:316 views/wpiu-tools/page-fi-tools.php:81
+msgid "Post Types"
+msgstr "Tipos de Post"
+
+#: views/requirements-error.php:2
+#, php-format
+msgid ""
+"%s error: Your environment doesn't meet all of the system requirements "
+"listed below."
+msgstr ""
+"Erro %s : O ambiente não atende a todos os requisitos do sistema listados "
+"abaixo."
+
+#: views/requirements-error.php:6
+#, php-format
+msgid "PHP %s or higher"
+msgstr "PHP %s ou superior"
+
+#: views/requirements-error.php:7 views/requirements-error.php:12
+#, php-format
+msgid "(You're running version %s)"
+msgstr "(Você está executando a versão %s )"
+
+#: views/requirements-error.php:11
+#, php-format
+msgid "WordPress %s or higher"
+msgstr "WordPress %s ou superior"
+
+#: views/requirements-error.php:21
+#, php-format
+msgid ""
+"If you need to upgrade your version of PHP you can ask your hosting company "
+"for assistance, and if you need help upgrading WordPress you can refer to <a "
+"href=\"%s\">the Codex</a>."
+msgstr ""
+"Se você precisar atualizar sua versão do PHP, você pode pedir a sua empresa "
+"de hospedagem por suporte, e se você precisar de ajuda para atualizar o "
+"WordPress você pode consultar <a href=\"%s\"> o Codex </ a>."
+
+#: views/wpiu-settings/page-settings-fields.php:75
+msgid ""
+"Do not forget to write a dot before the actual extension e.g. .jpg and not "
+"only jpg."
+msgstr ""
+"Não se esqueça de escrever um ponto antes da atual extensãol - . jpg e não "
+"só jpg."
+
+#: views/wpiu-settings/page-settings-fields.php:82
+msgid "A featured image will only be set if none has been explicitly defined."
+msgstr ""
+"A imagem destacada só será definida se nada tiver sido explicitamente "
+"definido."
+
+#: views/wpiu-settings/page-settings-fields.php:88
+msgid ""
+"In the criteria below, a list without selection will be handled the same as "
+"when all entries are selected. To deactivate this feature please use the "
+"checkbox above."
+msgstr ""
+"Nos critérios abaixo, uma lista sem seleção será tratada da mesma forma "
+"quando todas as entradas são selecionadas. Para desativar este recurso, por "
+"favor use a caixa de seleção acima."
+
+#: views/wpiu-settings/page-settings-fields.php:103
+#: views/wpiu-settings/page-settings-fields.php:118
+#: views/wpiu-settings/page-settings-fields.php:142
+#: views/wpiu-settings/page-settings-fields.php:161
+#: views/wpiu-tools/page-fi-tools.php:26 views/wpiu-tools/page-fi-tools.php:46
+#: views/wpiu-tools/page-fi-tools.php:75 views/wpiu-tools/page-fi-tools.php:99
+msgid "Clear"
+msgstr "Limpar"
+
+#: views/wpiu-settings/page-settings-section-headers.php:2
+msgid "Set options influencing how the files will be renamed."
+msgstr ""
+"Defina as opções que influenciam a forma como os arquivos serão renomeados."
+
+#: views/wpiu-settings/page-settings-section-headers.php:7
+msgid "Set options for featured images."
+msgstr "Definir opções para imagens destacadas."
+
+#: views/wpiu-settings/page-settings.php:11
+msgid "Save Changes"
+msgstr "Salvar alterações"
+
+#: views/wpiu-tools/page-ci-tools.php:26
+msgid "Cleanup Images"
+msgstr "Limpar imagens"
+
+#: views/wpiu-tools/page-ci-tools.php:30
+msgid "Options"
+msgstr "Opções"
+
+#: views/wpiu-tools/page-ci-tools.php:37
+msgid "Images per page:"
+msgstr "Imagens por página:"
+
+#: views/wpiu-tools/page-ci-tools.php:47
+msgid "Ordered by:"
+msgstr "Ordenado por:"
+
+#: views/wpiu-tools/page-ci-tools.php:52
+msgid "Date Added ascending (first added first)"
+msgstr "Data de Envio ascendente (os enviados primeiro vem antes)"
+
+#: views/wpiu-tools/page-ci-tools.php:53
+msgid "Date Added descending (last added first)"
+msgstr "Data de Envio descendente (os enviados por último vem antes)"
+
+#: views/wpiu-tools/page-ci-tools.php:69
+msgid "Scan Images"
+msgstr "Escanear imagens"
+
+#: views/wpiu-tools/page-ci-tools.php:101
+msgid "Next"
+msgstr "Próximo"
+
+#: views/wpiu-tools/page-ci-tools.php:102
+msgid "Previous"
+msgstr "Anterior"
+
+#: views/wpiu-tools/page-fi-tools.php:7
+msgid ""
+"Sets the first image as featured image (if none available) for all posts "
+"matching the criteria below."
+msgstr ""
+"Define a primeira imagem como imagem destacada (se não disponível) para "
+"todas as mensagens que correspondam aos critérios abaixo."
+
+#~ msgid "Bulk Feature Image"
+#~ msgstr "Imagem destacada em massa"
