@@ -68,9 +68,9 @@ namespace :db do
 
 			within release_path do
 				execute :wp, "db import #{fetch(:backup_file)}"
-				execute :wp, "search-replace --network --url=kpress.local #{fetch(:wp_localurl)} #{fetch(:stage_url)}"
-				execute :wp, "search-replace --network #{fetch(:wp_site1_localurl)} #{fetch(:site1_url)}"
-				execute :wp, "search-replace --network #{fetch(:wp_site2_localurl)} #{fetch(:site2_url)}"
+				execute :wp, "search-replace --all-tables --url=kpress.local #{fetch(:wp_localurl)} #{fetch(:stage_url)}"
+				execute :wp, "search-replace --all-tables #{fetch(:wp_site1_localurl)} #{fetch(:site1_url)}"
+				execute :wp, "search-replace --all-tables #{fetch(:wp_site2_localurl)} #{fetch(:site2_url)}"
 				execute :rm, "#{fetch(:backup_file)}"
 			end
 
