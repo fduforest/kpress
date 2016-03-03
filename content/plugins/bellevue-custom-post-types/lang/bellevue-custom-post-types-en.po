@@ -1,0 +1,591 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bellevue Custom Post Types\n"
+"POT-Creation-Date: 2015-10-14 11:25-0800\n"
+"PO-Revision-Date: 2015-10-14 11:25-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: bellevue-custom-post-types.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: bellevue-custom-post-types.php:33
+msgctxt "Post Type General Name"
+msgid "Rooms"
+msgstr ""
+
+#: bellevue-custom-post-types.php:34
+msgctxt "Post Type Singular Name"
+msgid "Room"
+msgstr ""
+
+#: bellevue-custom-post-types.php:35 bellevue-custom-post-types.php:63
+msgid "Rooms"
+msgstr ""
+
+#: bellevue-custom-post-types.php:36
+msgid "Parent Room:"
+msgstr ""
+
+#: bellevue-custom-post-types.php:37
+msgid "All Rooms"
+msgstr ""
+
+#: bellevue-custom-post-types.php:38
+msgid "View Room"
+msgstr ""
+
+#: bellevue-custom-post-types.php:39
+msgid "Add New Room"
+msgstr ""
+
+#: bellevue-custom-post-types.php:40 bellevue-custom-post-types.php:160
+#: bellevue-custom-post-types.php:209 bellevue-custom-post-types.php:263
+#: bellevue-custom-post-types.php:317 bellevue-custom-post-types.php:371
+#: bellevue-custom-post-types.php:425 bellevue-custom-post-types.php:479
+#: bellevue-custom-post-types.php:534 bellevue-custom-post-types.php:589
+#: bellevue-custom-post-types.php:647 bellevue-custom-post-types.php:705
+msgid "Add New"
+msgstr ""
+
+#: bellevue-custom-post-types.php:41
+msgid "Edit Room"
+msgstr ""
+
+#: bellevue-custom-post-types.php:42
+msgid "Update Room"
+msgstr ""
+
+#: bellevue-custom-post-types.php:43
+msgid "Search Room"
+msgstr ""
+
+#: bellevue-custom-post-types.php:44 bellevue-custom-post-types.php:164
+#: bellevue-custom-post-types.php:213 bellevue-custom-post-types.php:267
+#: bellevue-custom-post-types.php:321 bellevue-custom-post-types.php:375
+#: bellevue-custom-post-types.php:429 bellevue-custom-post-types.php:483
+#: bellevue-custom-post-types.php:538 bellevue-custom-post-types.php:593
+#: bellevue-custom-post-types.php:651 bellevue-custom-post-types.php:709
+msgid "Not found"
+msgstr ""
+
+#: bellevue-custom-post-types.php:45 bellevue-custom-post-types.php:165
+#: bellevue-custom-post-types.php:214 bellevue-custom-post-types.php:268
+#: bellevue-custom-post-types.php:322 bellevue-custom-post-types.php:376
+#: bellevue-custom-post-types.php:430 bellevue-custom-post-types.php:484
+#: bellevue-custom-post-types.php:539 bellevue-custom-post-types.php:594
+#: bellevue-custom-post-types.php:652 bellevue-custom-post-types.php:710
+msgid "Not found in Trash"
+msgstr ""
+
+#: bellevue-custom-post-types.php:62
+msgid "themo_rooms"
+msgstr ""
+
+#: bellevue-custom-post-types.php:101
+msgctxt "Taxonomy General Name"
+msgid "Room Types"
+msgstr ""
+
+#: bellevue-custom-post-types.php:102
+msgctxt "Taxonomy Singular Name"
+msgid "Room Type"
+msgstr ""
+
+#: bellevue-custom-post-types.php:103
+msgid "Room Types"
+msgstr ""
+
+#: bellevue-custom-post-types.php:104
+msgid "All Room Types"
+msgstr ""
+
+#: bellevue-custom-post-types.php:105
+msgid "Parent Room Type"
+msgstr ""
+
+#: bellevue-custom-post-types.php:106
+msgid "Parent Room Type:"
+msgstr ""
+
+#: bellevue-custom-post-types.php:107
+msgid "New Room Type Name"
+msgstr ""
+
+#: bellevue-custom-post-types.php:108
+msgid "Add New Room Type"
+msgstr ""
+
+#: bellevue-custom-post-types.php:109
+msgid "Edit Room Type"
+msgstr ""
+
+#: bellevue-custom-post-types.php:110
+msgid "Update Room Type"
+msgstr ""
+
+#: bellevue-custom-post-types.php:111
+msgid "Separate Room Type with commas"
+msgstr ""
+
+#: bellevue-custom-post-types.php:112
+msgid "Search Room Types"
+msgstr ""
+
+#: bellevue-custom-post-types.php:113
+msgid "Add or remove room type"
+msgstr ""
+
+#: bellevue-custom-post-types.php:114
+msgid "Choose from the most room types"
+msgstr ""
+
+#: bellevue-custom-post-types.php:115 bellevue-custom-post-types.php:760
+msgid "Not Found"
+msgstr ""
+
+#: bellevue-custom-post-types.php:153
+msgctxt "Post Type General Name"
+msgid "Accordions"
+msgstr ""
+
+#: bellevue-custom-post-types.php:154
+msgctxt "Post Type Singular Name"
+msgid "Accordion"
+msgstr ""
+
+#: bellevue-custom-post-types.php:155
+msgid "Accordion"
+msgstr ""
+
+#: bellevue-custom-post-types.php:156 bellevue-custom-post-types.php:205
+#: bellevue-custom-post-types.php:259 bellevue-custom-post-types.php:313
+#: bellevue-custom-post-types.php:367 bellevue-custom-post-types.php:421
+#: bellevue-custom-post-types.php:475 bellevue-custom-post-types.php:530
+#: bellevue-custom-post-types.php:585 bellevue-custom-post-types.php:643
+#: bellevue-custom-post-types.php:701
+msgid "Parent Item:"
+msgstr ""
+
+#: bellevue-custom-post-types.php:157 bellevue-custom-post-types.php:206
+#: bellevue-custom-post-types.php:260 bellevue-custom-post-types.php:314
+#: bellevue-custom-post-types.php:368 bellevue-custom-post-types.php:422
+#: bellevue-custom-post-types.php:476 bellevue-custom-post-types.php:531
+#: bellevue-custom-post-types.php:586 bellevue-custom-post-types.php:644
+#: bellevue-custom-post-types.php:702
+msgid "All Items"
+msgstr ""
+
+#: bellevue-custom-post-types.php:158 bellevue-custom-post-types.php:207
+#: bellevue-custom-post-types.php:261 bellevue-custom-post-types.php:315
+#: bellevue-custom-post-types.php:369 bellevue-custom-post-types.php:423
+#: bellevue-custom-post-types.php:477 bellevue-custom-post-types.php:532
+#: bellevue-custom-post-types.php:587 bellevue-custom-post-types.php:645
+#: bellevue-custom-post-types.php:703
+msgid "View Item"
+msgstr ""
+
+#: bellevue-custom-post-types.php:159 bellevue-custom-post-types.php:208
+#: bellevue-custom-post-types.php:262 bellevue-custom-post-types.php:316
+#: bellevue-custom-post-types.php:370 bellevue-custom-post-types.php:424
+#: bellevue-custom-post-types.php:478 bellevue-custom-post-types.php:533
+#: bellevue-custom-post-types.php:588 bellevue-custom-post-types.php:646
+#: bellevue-custom-post-types.php:704
+msgid "Add New Item"
+msgstr ""
+
+#: bellevue-custom-post-types.php:161 bellevue-custom-post-types.php:210
+#: bellevue-custom-post-types.php:264 bellevue-custom-post-types.php:318
+#: bellevue-custom-post-types.php:372 bellevue-custom-post-types.php:426
+#: bellevue-custom-post-types.php:480 bellevue-custom-post-types.php:535
+#: bellevue-custom-post-types.php:590 bellevue-custom-post-types.php:648
+#: bellevue-custom-post-types.php:706
+msgid "Edit Item"
+msgstr ""
+
+#: bellevue-custom-post-types.php:162 bellevue-custom-post-types.php:211
+#: bellevue-custom-post-types.php:265 bellevue-custom-post-types.php:319
+#: bellevue-custom-post-types.php:373 bellevue-custom-post-types.php:427
+#: bellevue-custom-post-types.php:481 bellevue-custom-post-types.php:536
+#: bellevue-custom-post-types.php:591 bellevue-custom-post-types.php:649
+#: bellevue-custom-post-types.php:707
+msgid "Update Item"
+msgstr ""
+
+#: bellevue-custom-post-types.php:163 bellevue-custom-post-types.php:212
+#: bellevue-custom-post-types.php:266 bellevue-custom-post-types.php:320
+#: bellevue-custom-post-types.php:374 bellevue-custom-post-types.php:428
+#: bellevue-custom-post-types.php:482 bellevue-custom-post-types.php:537
+#: bellevue-custom-post-types.php:592 bellevue-custom-post-types.php:650
+#: bellevue-custom-post-types.php:708
+msgid "Search Item"
+msgstr ""
+
+#: bellevue-custom-post-types.php:168
+msgid "themo_accordion"
+msgstr ""
+
+#: bellevue-custom-post-types.php:169
+msgid "Accordion Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:202
+msgctxt "Post Type General Name"
+msgid "Brands"
+msgstr ""
+
+#: bellevue-custom-post-types.php:203
+msgctxt "Post Type Singular Name"
+msgid "Brand"
+msgstr ""
+
+#: bellevue-custom-post-types.php:204 bellevue-custom-post-types.php:218
+msgid "Brand"
+msgstr ""
+
+#: bellevue-custom-post-types.php:217
+msgid "themo_brands"
+msgstr ""
+
+#: bellevue-custom-post-types.php:256
+msgctxt "Post Type General Name"
+msgid "Faqs"
+msgstr ""
+
+#: bellevue-custom-post-types.php:257
+msgctxt "Post Type Singular Name"
+msgid "Faq"
+msgstr ""
+
+#: bellevue-custom-post-types.php:258
+msgid "Faq"
+msgstr ""
+
+#: bellevue-custom-post-types.php:271
+msgid "themo_faq"
+msgstr ""
+
+#: bellevue-custom-post-types.php:272
+msgid "Faq Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:310
+msgctxt "Post Type General Name"
+msgid "Featured"
+msgstr ""
+
+#: bellevue-custom-post-types.php:311
+msgctxt "Post Type Singular Name"
+msgid "Featured"
+msgstr ""
+
+#: bellevue-custom-post-types.php:312 bellevue-custom-post-types.php:796
+msgid "Featured"
+msgstr ""
+
+#: bellevue-custom-post-types.php:325
+msgid "themo_featured"
+msgstr ""
+
+#: bellevue-custom-post-types.php:326
+msgid "Featured Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:364
+msgctxt "Post Type General Name"
+msgid "Pricing Plans"
+msgstr ""
+
+#: bellevue-custom-post-types.php:365
+msgctxt "Post Type Singular Name"
+msgid "Pricing Plan"
+msgstr ""
+
+#: bellevue-custom-post-types.php:366
+msgid "Pricing Plan"
+msgstr ""
+
+#: bellevue-custom-post-types.php:379
+msgid "themo_pricing_plans"
+msgstr ""
+
+#: bellevue-custom-post-types.php:380
+msgid "Pricing Plan Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:418
+msgctxt "Post Type General Name"
+msgid "Sliders"
+msgstr ""
+
+#: bellevue-custom-post-types.php:419
+msgctxt "Post Type Singular Name"
+msgid "Slider"
+msgstr ""
+
+#: bellevue-custom-post-types.php:420
+msgid "Slider"
+msgstr ""
+
+#: bellevue-custom-post-types.php:433
+msgid "themo_slider"
+msgstr ""
+
+#: bellevue-custom-post-types.php:434
+msgid "Slider Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:472
+msgctxt "Post Type General Name"
+msgid "Teams"
+msgstr ""
+
+#: bellevue-custom-post-types.php:473
+msgctxt "Post Type Singular Name"
+msgid "Team"
+msgstr ""
+
+#: bellevue-custom-post-types.php:474
+msgid "Team"
+msgstr ""
+
+#: bellevue-custom-post-types.php:487
+msgid "themo_team"
+msgstr ""
+
+#: bellevue-custom-post-types.php:488
+msgid "Team Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:527
+msgctxt "Post Type General Name"
+msgid "Testimonials"
+msgstr ""
+
+#: bellevue-custom-post-types.php:528
+msgctxt "Post Type Singular Name"
+msgid "Testimonial"
+msgstr ""
+
+#: bellevue-custom-post-types.php:529
+msgid "Testimonial"
+msgstr ""
+
+#: bellevue-custom-post-types.php:542
+msgid "themo_testimonials"
+msgstr ""
+
+#: bellevue-custom-post-types.php:543
+msgid "Testimonial Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:582
+msgctxt "Post Type General Name"
+msgid "Thumbnail Sliders"
+msgstr ""
+
+#: bellevue-custom-post-types.php:583
+msgctxt "Post Type Singular Name"
+msgid "Thumbnail Slider"
+msgstr ""
+
+#: bellevue-custom-post-types.php:584
+msgid "Thumbnail Slider"
+msgstr ""
+
+#: bellevue-custom-post-types.php:597
+msgid "themo_thumb_slider"
+msgstr ""
+
+#: bellevue-custom-post-types.php:598
+msgid "Thumbnail Slider Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:640
+msgctxt "Post Type General Name"
+msgid "Tours"
+msgstr ""
+
+#: bellevue-custom-post-types.php:641
+msgctxt "Post Type Singular Name"
+msgid "Tour"
+msgstr ""
+
+#: bellevue-custom-post-types.php:642
+msgid "Tour"
+msgstr ""
+
+#: bellevue-custom-post-types.php:655
+msgid "themo_tour"
+msgstr ""
+
+#: bellevue-custom-post-types.php:656
+msgid "Tour Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:698
+msgctxt "Post Type General Name"
+msgid "Service Block & Showcase"
+msgstr ""
+
+#: bellevue-custom-post-types.php:699
+msgctxt "Post Type Singular Name"
+msgid "Service Block & Showcase"
+msgstr ""
+
+#: bellevue-custom-post-types.php:700 bellevue-custom-post-types.php:803
+msgid "Service Block & Showcase"
+msgstr ""
+
+#: bellevue-custom-post-types.php:713
+msgid "themo_service_block"
+msgstr ""
+
+#: bellevue-custom-post-types.php:714
+msgid "Service Block & Showcase Box"
+msgstr ""
+
+#: bellevue-custom-post-types.php:746
+msgctxt "Taxonomy General Name"
+msgid "Groups"
+msgstr ""
+
+#: bellevue-custom-post-types.php:747
+msgctxt "Taxonomy Singular Name"
+msgid "Group"
+msgstr ""
+
+#: bellevue-custom-post-types.php:748 bellevue-custom-post-types.php:804
+msgid "Groups"
+msgstr ""
+
+#: bellevue-custom-post-types.php:749
+msgid "All Groups"
+msgstr ""
+
+#: bellevue-custom-post-types.php:750
+msgid "Parent Group"
+msgstr ""
+
+#: bellevue-custom-post-types.php:751
+msgid "Parent Group:"
+msgstr ""
+
+#: bellevue-custom-post-types.php:752
+msgid "New Group Name"
+msgstr ""
+
+#: bellevue-custom-post-types.php:753
+msgid "Add New Group"
+msgstr ""
+
+#: bellevue-custom-post-types.php:754
+msgid "Edit Group"
+msgstr ""
+
+#: bellevue-custom-post-types.php:755
+msgid "Update Group"
+msgstr ""
+
+#: bellevue-custom-post-types.php:756
+msgid "Separate group with commas"
+msgstr ""
+
+#: bellevue-custom-post-types.php:757
+msgid "Search groups"
+msgstr ""
+
+#: bellevue-custom-post-types.php:758
+msgid "Add or remove group"
+msgstr ""
+
+#: bellevue-custom-post-types.php:759
+msgid "Choose from the most used groups"
+msgstr ""
+
+#: bellevue-custom-post-types.php:790
+msgid "Bellevue"
+msgstr ""
+
+#: bellevue-custom-post-types.php:793
+msgid "Accordions"
+msgstr ""
+
+#: bellevue-custom-post-types.php:794
+msgid "Brands"
+msgstr ""
+
+#: bellevue-custom-post-types.php:795
+msgid "FAQs"
+msgstr ""
+
+#: bellevue-custom-post-types.php:797
+msgid "Pricing Plans"
+msgstr ""
+
+#: bellevue-custom-post-types.php:798
+msgid "Sliders"
+msgstr ""
+
+#: bellevue-custom-post-types.php:799
+msgid "Teams"
+msgstr ""
+
+#: bellevue-custom-post-types.php:800
+msgid "Testimonials"
+msgstr ""
+
+#: bellevue-custom-post-types.php:801
+msgid "Thumbnail Sliders"
+msgstr ""
+
+#: bellevue-custom-post-types.php:802
+msgid "Tours"
+msgstr ""
+
+#: bellevue-custom-post-types.php:812
+msgid "Welcome to Bellevue"
+msgstr ""
+
+#: bellevue-custom-post-types.php:814
+msgid "Theme Options"
+msgstr ""
+
+#: bellevue-custom-post-types.php:817
+msgid "Add / Manage Content"
+msgstr ""
+
+#: bellevue-custom-post-types.php:874
+#, php-format
+msgid "Show All %1$s"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Bellevue Custom Post Types"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://themovation.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This is a plugin for the Bellevue theme. It adds the custom post types "
+"required to run this theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Themovation"
+msgstr ""
