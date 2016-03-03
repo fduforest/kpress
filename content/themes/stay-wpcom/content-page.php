@@ -12,8 +12,15 @@
 	if ( '' != get_the_post_thumbnail( get_the_ID() ) ) :
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'feat-img' );
 
+		if ( is_page_template( 'page-templates/full-width-page.php' ) )
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'feat-img-full' );
+
+
+		// If the image is greater than or equal to 1200 and it's using the Full Width Page template, show it
+		if ( is_page_template( 'page-templates/full-width-page.php' ) && $image[1] >= 1200 ) :
+			the_post_thumbnail( 'feat-img-full' );
 		// If the image is greater than or equal to 920 with 2 sidebars, or 640 with 1 sidebar, show it
-		if ( ( ! is_active_sidebar( 'sidebar-2' ) && $image[1] >= 920 ) || ( is_active_sidebar( 'sidebar-2' ) && $image[1] >= 640 ) ) :
+		elseif ( ( ! is_active_sidebar( 'sidebar-2' ) && $image[1] >= 920 ) || ( is_active_sidebar( 'sidebar-2' ) && $image[1] >= 640 ) ) :
 			the_post_thumbnail( 'feat-img' );
 		endif;
 	endif;

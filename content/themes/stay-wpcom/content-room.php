@@ -55,7 +55,7 @@ if ( '' != get_the_post_thumbnail() )
 
 		<header class="entry-header">
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<span class="room-price"><?php echo get_post_meta( get_the_ID(), 'hotels_price', true ); ?></span>
+			<span class="room-price"><?php echo esc_html( get_post_meta( get_the_ID(), 'hotels_price', true ) ); ?></span>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">

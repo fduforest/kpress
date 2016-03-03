@@ -1,0 +1,596 @@
+# Translation of Stay in Azerbaijani
+# This file is distributed under the same license as the Stay package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-05-15 17:39:23+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
+"Project-Id-Version: Stay\n"
+
+#. Author URI of the plugin/theme
+#: wp-content/themes/pub/stay/style.css
+msgid "https://wordpress.com/themes/"
+msgstr "https://wordpress.com/themes/"
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/stay/page-templates/room-page.php
+msgid "Rooms Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/stay/page-templates/testimonial-page.php
+msgid "Testimonials Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/stay/page-templates/full-width-page.php
+msgid "Full Width Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/stay/page-templates/home-page.php
+msgid "Home"
+msgstr "Əsas səhifə"
+
+#. Description of the plugin/theme
+#: wp-content/themes/pub/stay/style.css
+msgid "Designed with hotels, inns, and bed & breakfasts in mind, Stay is the perfect theme for property owners. Take advantage of its Room and Testimonial post types, home page template, large imagery, and minimal layout to show off to potential guests."
+msgstr ""
+
+#: sidebar-blog-secondary.php:25
+msgid "Meta"
+msgstr "Meta"
+
+#: searchform.php:12
+msgctxt "submit button"
+msgid "Search"
+msgstr "Axtar"
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Axtar &hellip;"
+
+#: searchform.php:10
+msgctxt "assistive text"
+msgid "Search"
+msgstr "Axtar"
+
+#: search.php:17
+msgid "Search Results for: %s"
+msgstr " %s üçün Axtarışın Nəticələri:"
+
+#: no-results.php:29
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Axtardığınız səhifə tapılmadı. Bəlkə axtarış qutusu axtardığınızı tapmaqda sizə kömək edər."
+
+#: no-results.php:24
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Bağışlayın, axtarış kriteriyalarınıza uyğun heç bir şey tapılmadı. Bəzi fərqli açar kəlmələrdən istifadə edərək təkrar yoxlayın."
+
+#: no-results.php:20
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "İlk yazınızı dərc etməyə hazırsınızmı? <a href=\"%1$s\">Buradan başlayın</a>."
+
+#: inc/template-tags.php:135
+msgid "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\">%4$s</time></a><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\">%4$s</time></a><span class=\"byline\"> tarixində <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a> tərəfindən göndərildi</span></span>"
+
+#: no-results.php:14
+msgid "Nothing Found"
+msgstr "Tapılmadı"
+
+#: inc/template-tags.php:131 inc/template-tags.php:141
+msgid "View all posts by %s"
+msgstr "%s tərəfindən yazılmış bütün yazılara bax"
+
+#: inc/template-tags.php:122
+msgid "<span class=\"post-format-link\"><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a></span> | Posted on <a href=\"%4$s\" title=\"%5$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%6$s\">%7$s</time></a><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%8$s\" title=\"%9$s\" rel=\"author\">%10$s</a></span></span>"
+msgstr ""
+
+#: inc/template-tags.php:124 slider.php:40
+msgid "Permalink to %s"
+msgstr "%s üçün daimi bağlantı"
+
+#: inc/template-tags.php:95
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: inc/template-tags.php:89
+msgid "Your comment is awaiting moderation."
+msgstr "Şərhiniz yoxlama gözləyir."
+
+#: inc/template-tags.php:86
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">dedi ki:</span>"
+
+#: inc/template-tags.php:76
+msgid "Pingback:"
+msgstr "Geri bildiriş: "
+
+#: inc/template-tags.php:51
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Yeni yazılar <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:47
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Əski yazılar"
+
+#: inc/template-tags.php:42
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: inc/template-tags.php:41
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: inc/template-tags.php:37
+msgid "Post navigation"
+msgstr "Yazı naviqasiyaları"
+
+#: inc/extras.php:121
+msgid "Page %s"
+msgstr "Səhifə %s"
+
+#: inc/customizer.php:169
+msgid "Pinterest Link"
+msgstr "Pinterest bağlantısı"
+
+#: inc/customizer.php:180
+msgid "Vimeo Link"
+msgstr "Vimeo bağlantısı"
+
+#: inc/customizer.php:191
+msgid "Email Address"
+msgstr "E-poçt ünvanı"
+
+#: inc/customizer.php:147
+msgid "YouTube Link"
+msgstr "YouTube bağlantısı"
+
+#: inc/customizer.php:158
+msgid "Google Plus Link"
+msgstr "Google Plus bağlantısı"
+
+#: inc/customizer.php:116
+msgid "Social Links"
+msgstr "Sosial Bağlantılar"
+
+#: inc/customizer.php:125
+msgid "Twitter Link"
+msgstr "Twitter bağlantısı"
+
+#: inc/customizer.php:136
+msgid "Facebook Link"
+msgstr "Facebook bağlantısı"
+
+#: inc/customizer.php:42
+msgid "Home Slider"
+msgstr "Əsas səhifə slaydı"
+
+#: inc/customizer.php:51
+msgid "Featured Page 1"
+msgstr "Xüsusi Səhifə 1"
+
+#: inc/customizer.php:62
+msgid "Featured Page 2"
+msgstr "Xüsusi Səhifə 2"
+
+#: inc/customizer.php:73
+msgid "Featured Page 3"
+msgstr "Xüsusi Səhifə 3"
+
+#: inc/customizer.php:84
+msgid "Featured Page 4"
+msgstr "Xüsusi Səhifə 4"
+
+#: inc/customizer.php:95
+msgid "Featured Page 5"
+msgstr "Xüsusi Səhifə 5"
+
+#: inc/customizer.php:106
+msgid "Featured Page 6"
+msgstr "Xüsusi Səhifə 6"
+
+#: inc/cpt/testimonials.php:80 inc/cpt/testimonials.php:86
+msgid "Citation"
+msgstr "Sitat"
+
+#: inc/cpt/testimonials.php:51
+msgid "No Testimonials found"
+msgstr "Heç Bir Xarakteristika Tapılmadı"
+
+#: inc/cpt/testimonials.php:52
+msgid "No Testimonials found in Trash"
+msgstr "Zibil qutusunda heç bir xarakteristika yoxdur"
+
+#: inc/cpt/testimonials.php:49
+msgid "View Testimonial"
+msgstr "Xarakteristikaya Bax"
+
+#: inc/cpt/testimonials.php:50
+msgid "Search Testimonials"
+msgstr "Xarakteristikaları Axtar"
+
+#: inc/cpt/testimonials.php:45 inc/cpt/testimonials.php:46
+msgid "Add a Testimonial"
+msgstr "Xarakteristikaya əlavə et"
+
+#: inc/cpt/testimonials.php:47
+msgid "Edit Testimonial"
+msgstr "Xarakteristikanı redaktə et"
+
+#: inc/cpt/testimonials.php:48
+msgid "New Testimonial"
+msgstr "Yeni Xarakteristika"
+
+#: inc/cpt/testimonials.php:42
+msgid "Testimonial"
+msgstr "Xarakteristika"
+
+#: inc/cpt/testimonials.php:44
+msgid "All Testimonials"
+msgstr "Bütün Xarakteristikalar"
+
+#: inc/cpt/rooms.php:120 inc/cpt/rooms.php:126
+msgid "Price"
+msgstr "Qiymət"
+
+#: inc/cpt/testimonials.php:41 inc/cpt/testimonials.php:43
+msgid "Testimonials"
+msgstr "Xarakteristikalar"
+
+#: inc/cpt/rooms.php:60 inc/cpt/rooms.php:61
+msgid "Add a Room"
+msgstr "Otaq əlavə et"
+
+#: inc/cpt/rooms.php:62
+msgid "Edit Room"
+msgstr "Otağı redaktə et"
+
+#: inc/cpt/rooms.php:63
+msgid "New Room"
+msgstr "Yeni Otaq"
+
+#: inc/cpt/rooms.php:64
+msgid "View Room"
+msgstr "Otağa Bax"
+
+#: inc/cpt/rooms.php:65
+msgid "Search Rooms"
+msgstr "Otaqları Axtar"
+
+#: inc/cpt/rooms.php:66
+msgid "No Rooms found"
+msgstr "Heç bir otaq tapılmadı"
+
+#: inc/cpt/rooms.php:67
+msgid "No Rooms found in Trash"
+msgstr "Zibil qutusunda otaq tapılmadı"
+
+#: inc/cpt/rooms.php:57
+msgid "Room"
+msgstr "Otaq"
+
+#: inc/cpt/rooms.php:59
+msgid "All Rooms"
+msgstr "Bütün Otaqlar"
+
+#: inc/cpt/rooms.php:40
+msgid "New Amenity Name"
+msgstr "Yeni incəliyin ismi"
+
+#: inc/cpt/rooms.php:41
+msgid "Separate Amenities with commas"
+msgstr "Yeni incəlikləri vergüllə ayır"
+
+#: inc/cpt/rooms.php:42
+msgid "Add or remove Amenities"
+msgstr "İncəlik əlavə et vəya sil"
+
+#: inc/cpt/rooms.php:43
+msgid "Choose from the most used Amenities"
+msgstr "Ən çox istifadə edilən incəliklərdən seç"
+
+#: inc/cpt/rooms.php:45
+msgid "No Amenities found"
+msgstr "Heç bir incəlik tapılmadı"
+
+#: inc/cpt/rooms.php:53 inc/cpt/testimonials.php:38
+msgid "Rooms your hotel offers"
+msgstr ""
+
+#: inc/cpt/rooms.php:56 inc/cpt/rooms.php:58
+msgid "Rooms"
+msgstr "Otaqlar"
+
+#: inc/cpt/rooms.php:31
+msgid "Amenities"
+msgstr "İncəliklər"
+
+#: inc/cpt/rooms.php:32
+msgid "Amenity"
+msgstr "İncəlik"
+
+#: inc/cpt/rooms.php:33
+msgid "Search Amenities"
+msgstr "İncəlikləri Axtar"
+
+#: inc/cpt/rooms.php:34
+msgid "Popular Amenities"
+msgstr "Populyar İncəliklər"
+
+#: inc/cpt/rooms.php:35
+msgid "All Amenities"
+msgstr "Bütün İncəliklər"
+
+#: inc/cpt/rooms.php:36
+msgid "Edit Amenity"
+msgstr "İncəliyi redaktə et"
+
+#: inc/cpt/rooms.php:37
+msgid "View Amenity"
+msgstr "İncəliyə Bax"
+
+#: inc/cpt/rooms.php:38
+msgid "Update Amenity"
+msgstr "İncəliyi Yenilə"
+
+#: inc/cpt/rooms.php:39
+msgid "Add New Amenity"
+msgstr "Yeni incəlik əlavə et"
+
+#: image.php:106
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Şərhlər və geri izləmələr indilik bağlıdır."
+
+#: image.php:104
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Geri izləmələr bağlıdır, amma <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">bir şərh</a> yaza bilərsiniz."
+
+#: image.php:102
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Şərhlər bağlıdır, amma geri izləmə qoya bilərsiniz: <a class=\"trackback-link\" href=\"%s\" title=\"Yazınızdan Geri İzləmə Bağlantısı\" rel=\"trackback\">Geri İzləmə Bağlantısı</a>."
+
+#: image.php:100
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Bir şərh yazın</a> və ya bir geri izləmə qoyun: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Geri İzləmə Ünvanı</a>. "
+
+#: image.php:40
+msgid "Next &rarr;"
+msgstr "Sonrakı &rarr;"
+
+#: image.php:39
+msgid "&larr; Previous"
+msgstr "&larr; Öncəki"
+
+#: image.php:24
+msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr "<span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> tarixində <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> üzərində <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a> içində dərc edildi."
+
+#: header.php:52
+msgid "Skip to content"
+msgstr "Mühtəviyyata keç"
+
+#: functions.php:198
+msgid "Header Widget Area"
+msgstr "Başlıq Vidcet Sahəsi"
+
+#. translators: If there are characters in your language that are not supported
+#. by Source Sans or Gilda Display, translate this to 'off'. Do not translate
+#. into your own language.
+#: functions.php:218
+msgctxt "Source Sans font: on or off"
+msgid "on"
+msgstr "açıq"
+
+#: functions.php:221
+msgctxt "Gilda Display font: on or off"
+msgid "on"
+msgstr "açıq"
+
+#: header.php:51
+msgid "Menu"
+msgstr "Menyu"
+
+#: functions.php:158
+msgid "Home First Widget Area"
+msgstr "Əsas Səhifə İlk Vidcet Sahəsi"
+
+#: functions.php:166
+msgid "Home Second Widget Area"
+msgstr "Əsas Səhifə İkinci Vidcet Sahəsi"
+
+#: functions.php:174
+msgid "Home Third Widget Area"
+msgstr "Əsas Səhifə Üçüncü Vidcet Sahəsi"
+
+#: functions.php:182
+msgid "Blog Primary Sidebar"
+msgstr "Birinci dərəcəli Bloq Yan Menyusu"
+
+#: functions.php:190
+msgid "Blog Secondary Sidebar"
+msgstr "İkinci dərəcəli Bloq Yan Menyusu"
+
+#: functions.php:150
+msgid "Secondary Sidebar"
+msgstr "İkinci dərəcəli Yan Menyu Çubuğu"
+
+#: functions.php:95
+msgid "Top Menu"
+msgstr "Yuxarı Menyu"
+
+#: functions.php:142
+msgid "Primary Sidebar"
+msgstr "Birinci Dərəcəli Yan Menyu Çubuğu"
+
+#: functions.php:94
+msgid "Primary Menu"
+msgstr "Əsas menyu"
+
+#: footer.php:66 footer.php:67
+msgid "Google Plus"
+msgstr "Google Plus"
+
+#: footer.php:74 footer.php:75
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: footer.php:82 footer.php:83
+msgid "YouTube"
+msgstr "YouTube"
+
+#: footer.php:58 footer.php:59
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: footer.php:50 footer.php:51
+msgid "Facebook"
+msgstr "Facebook"
+
+#: footer.php:42 footer.php:43
+msgid "Twitter"
+msgstr "Twitter"
+
+#: footer.php:34 footer.php:35
+msgid "Email"
+msgstr "e-poçt"
+
+#: footer.php:20
+msgid "Theme: %1$s by %2$s."
+msgstr "Mövzu: %1$s tərəfindən %2$s."
+
+#: footer.php:18
+msgid "Proudly powered by %s"
+msgstr "%s qürurla təqdim edər"
+
+#: footer.php:18
+msgid "A Semantic Personal Publishing Platform"
+msgstr "Müasir Fərdi Yayın Platforması"
+
+#: content.php:56
+msgid "% Comments"
+msgstr "% Şərh"
+
+#: content.php:56
+msgid "1 Comment"
+msgstr "1 Şərh"
+
+#: content.php:56
+msgid "Leave a comment"
+msgstr "Bir şərh yazın"
+
+#: content.php:49
+msgid "Tagged %1$s"
+msgstr "%1$s Etiketləndi"
+
+#: content.php:38
+msgid "Posted in %1$s"
+msgstr "%1$s içində dərc edildi"
+
+#: content-testimonial.php:12 content.php:25 page-templates/home-page.php:22
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Oxumağa davam et <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-single.php:54
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Bu yazı %1$s içində dərc edildi. <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">Daimi bağlantını</a> seçilmişlərinizə əlavə edin."
+
+#: content-single.php:52
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Bu yazı %1$s içində dərc edildi və %2$s olaraq etiketləndi. <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">Daimi bağlantını</a> seçilmişlərinizə əlavə edin."
+
+#: content-single.php:46
+msgid "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "<a href=\"%3$s\" title=\" %4$s üçün daimi bağlantı\" rel=\"bookmark\">daimi bağlantını</a> seçilmişlərinizə əlavə edin."
+
+#: content-single.php:44
+msgid "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Bu yazı %2$s ilə etiketləndi. <a href=\"%3$s\" title=\"%4$s üçün daimi bağlantı\" rel=\"bookmark\">Daimi bağlantını</a> seçilmişlərə əlavə edin."
+
+#: content-room.php:31 content-room.php:73
+msgid "Amenities:"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: content-single.php:36 content-single.php:39 content.php:34 content.php:44
+msgid ", "
+msgstr ","
+
+#: content-page.php:35 content-room.php:32 content-room.php:74
+#: content-single.php:68 content-testimonial.php:20 content.php:59 image.php:35
+#: image.php:108 inc/template-tags.php:76 inc/template-tags.php:97
+#: page-templates/home-page.php:27
+msgid "Edit"
+msgstr "Redaktə et"
+
+#: content-page.php:33 content-room.php:26 content-single.php:30 content.php:26
+#: image.php:94
+msgid "Pages:"
+msgstr "Səhifələr:"
+
+#: comments.php:63
+msgid "Comments are closed."
+msgstr "Şərh üçün bağlıdır."
+
+#: comments.php:53
+msgid "Newer Comments &rarr;"
+msgstr "Yeni şərhlər &rarr;"
+
+#: comments.php:52
+msgid "&larr; Older Comments"
+msgstr "&larr; Əski şərhlər"
+
+#: comments.php:51
+msgid "Comment navigation"
+msgstr "Şərh naviqasiyası"
+
+#: comments.php:32
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; üzərinə bir şərh"
+msgstr[1] "&ldquo;%2$s&rdquo; üzərinə %1$s şərh"
+
+#: archive.php:49 sidebar-blog-secondary.php:18
+msgid "Archives"
+msgstr "Arxivlər"
+
+#: archive.php:46
+msgid "Yearly Archives: %s"
+msgstr "İllik Arxivlər: %s"
+
+#: archive.php:43
+msgid "Monthly Archives: %s"
+msgstr "Aylıq Arxivlər: %s"
+
+#: archive.php:40
+msgid "Daily Archives: %s"
+msgstr "Günlük Arxivlər: %s"
+
+#: archive.php:32
+msgid "Author Archives: %s"
+msgstr "Müəllifin arxivləri: %s"
+
+#: archive.php:25
+msgid "Tag Archives: %s"
+msgstr "%s Etiket Arxivləri: "
+
+#: archive.php:22
+msgid "Category Archives: %s"
+msgstr "Kateqoriya Arxivləri: %s"
+
+#: 404.php:20
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Burada heç bir şeyin tapılmadığı görünür. Bəlkə aşağıdakı bağlantılardan birini yoxlayasan və ya bir axtarış edəsən?"
+
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Bağışlayın! Bu səhifə tapılmır."

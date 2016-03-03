@@ -4,13 +4,10 @@
  * @since Stay 1.0
  */
 ?>
-<?php if ( function_exists('yoast_breadcrumb') ) {
-yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-} ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'flora-and-fauna' ), the_title_attribute( 'echo=0' ) ) ) . '" rel="bookmark">', '</a></h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">

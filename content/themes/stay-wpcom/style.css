@@ -1,27 +1,13 @@
 /*
 Theme Name: Stay
-Theme URI: http://theme.wordpress.com/themes/stay/
+Theme URI: https://wordpress.com/themes/stay/
 Description: Designed with hotels, inns, and bed &amp; breakfasts in mind, Stay is the perfect theme for property owners. Take advantage of its Room and Testimonial post types, home page template, large imagery, and minimal layout to show off to potential guests.
-Version: 1.0.1
+Version: 1.0.5
 Author: Automattic
-Author URI: http://automattic.com/
-License: GPL v2 or later
+Author URI: https://wordpress.com/themes/
+License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-
-@font-face {
-	font-family: 'Genericons';
-	src: url('font/genericons-regular-webfont.eot');
-	src: url('font/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('font/genericons-regular-webfont.woff') format('woff'),
-		 url('font/genericons-regular-webfont.ttf') format('truetype'),
-		 url('font/genericons-regular-webfont.svg#genericonsregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-.genericons {
-	font-family: 'Genericons';
-}
 
 /* =Reset
 -------------------------------------------------------------- */
@@ -514,6 +500,7 @@ a:active {
 	margin: 0 0 15px 0;
 	width: 100%;
 }
+.page-template-page-templatesfull-width-page-php #primary,
 .page-template-page-templateshome-page-php #primary {
 	margin: 0;
 	width: 100%;
@@ -537,6 +524,7 @@ a:active {
 .single-post #content {
 	padding-left: 0;
 }
+.page-template-page-templatesfull-width-page-php #content,
 .page-template-page-templateshome-page-php #content {
 	padding-left: 0;
 }
@@ -640,7 +628,8 @@ a:active {
 .navigation-main ul ul a:hover {
 	background-color: #fafafa;
 }
-.navigation-main ul li:hover > ul {
+.navigation-main ul li:hover > ul,
+.navigation-main ul li.focus > ul {
 	display: block;
 }
 .navigation-main li.current_page_item a,
@@ -704,12 +693,16 @@ a:active {
 		position: absolute;
 			top: 15px;
 			right: 0;
-		width: 100%;
+		width: auto;
 		z-index: 1000;
 	}
 	#site-navigation.main-small-navigation {
 		border-right: 1px solid #eee;
 		margin-right: -1px;
+		width: 100%;
+	}
+	#site-navigation .assistive-text {
+		font-size: 8px;
 	}
 	#site-navigation h1.menu-toggle {
 		color: #262626;
@@ -941,7 +934,7 @@ img.size-full {
 .wp-caption {
 	border: 1px solid #eee;
 	margin-bottom: 1.5em;
-	max-width: 100%;
+	max-width: 99.8%;
 }
 .wp-caption img[class*="wp-image-"],
 .wp-caption img[class*="size-"] {
@@ -1408,6 +1401,14 @@ img#wpstats {
 	margin: -10px auto 0 auto;
 }
 
+/* Site Logo */
+.site-header .site-logo {
+	margin-bottom: 5px;
+	max-height: 200px;
+	max-width: 600px;
+	width: auto;
+}
+
 /* Media queries for responsive design
 --------------------------------------------- */
 
@@ -1549,6 +1550,9 @@ img#wpstats {
 		margin-right: 0;
 		margin-left: 2%;
 		width: 25%;
+	}
+	.site-header .site-logo {
+		max-width: 100%;
 	}
 }
 
@@ -1697,5 +1701,9 @@ img#wpstats {
 	.social-links li {
 		float: left;
 		margin: 0 5px 0 0;
+	}
+
+	.site-header .site-logo {
+		max-height: 120px;
 	}
 }

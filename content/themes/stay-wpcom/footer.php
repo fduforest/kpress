@@ -15,11 +15,9 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'stay_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'stay' ); ?>" rel="generator"><?php printf( __( '', 'stay' ), '' ); ?></a>
-			<span class="sep"> </span>
-			<?php printf( __( '%1$s %2$s.', 'stay' ), '', '<a href="" rel="designer">Keynetic</a>' ); ?>
-<p>www.valjoly.com - www.tourisme-avesnois.com - ot.solrezis.free.fr - www.tourisme-nord.fr</p>
-<p>Mots clés relatifs: location valjolylocation valjoly, location val joly, location val joli, location val jolie, location vacances valjoly, location vacances val joly, week end val joly, hebergement val joly, bed & breakfast val joly, b&b val joly, hotel solre le château, chambre nord pas de calais , chambres d'hôtes nord pas de calais , gites nord pas de calais, maison d’hotes nord  pas de calais, hotel de charme nord pas de calais, restaurant val joly, restaurant valjoly, restaurant solre le château, chambre chez l habitant. </p>
+			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'stay' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'stay' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'stay' ), 'Stay', '<a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>' ); ?>
 		</div><!-- .site-info -->
 
 		<?php

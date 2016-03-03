@@ -1,0 +1,653 @@
+# Copyright (C) 2015 Automattic
+# This file is distributed under the GNU General Public License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Stay 1.0.2-wpcom\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/stay\n"
+"POT-Creation-Date: 2015-02-25 05:08:17+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:20
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: archive.php:22
+msgid "Category Archives: %s"
+msgstr ""
+
+#: archive.php:25
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: archive.php:32
+msgid "Author Archives: %s"
+msgstr ""
+
+#: archive.php:40
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:43
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:46
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:49 sidebar-blog-secondary.php:18
+msgid "Archives"
+msgstr ""
+
+#: comments.php:32
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:51
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:52
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:53
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:63
+msgid "Comments are closed."
+msgstr ""
+
+#: content-page.php:33 content-room.php:26 content-single.php:30
+#: content.php:26 image.php:94
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:35 content-room.php:32 content-room.php:74
+#: content-single.php:68 content-testimonial.php:20 content.php:59
+#: image.php:35 image.php:108 inc/template-tags.php:76
+#: inc/template-tags.php:97 page-templates/home-page.php:27
+msgid "Edit"
+msgstr ""
+
+#: content-room.php:31 content-room.php:73
+msgid "Amenities:"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: content-single.php:36 content-single.php:39 content.php:34 content.php:44
+msgid ", "
+msgstr ""
+
+#: content-single.php:44
+msgid ""
+"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink "
+"to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: content-single.php:46
+msgid ""
+"Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+
+#: content-single.php:52
+msgid ""
+"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
+"title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: content-single.php:54
+msgid ""
+"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
+"\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: content-testimonial.php:12 content.php:25 page-templates/home-page.php:22
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content.php:38
+msgid "Posted in %1$s"
+msgstr ""
+
+#: content.php:49
+msgid "Tagged %1$s"
+msgstr ""
+
+#: content.php:56
+msgid "Leave a comment"
+msgstr ""
+
+#: content.php:56
+msgid "1 Comment"
+msgstr ""
+
+#: content.php:56
+msgid "% Comments"
+msgstr ""
+
+#: footer.php:18
+msgid "A Semantic Personal Publishing Platform"
+msgstr ""
+
+#: footer.php:18
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:20
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: footer.php:34 footer.php:35
+msgid "Email"
+msgstr ""
+
+#: footer.php:42 footer.php:43
+msgid "Twitter"
+msgstr ""
+
+#: footer.php:50 footer.php:51
+msgid "Facebook"
+msgstr ""
+
+#: footer.php:58 footer.php:59
+msgid "Pinterest"
+msgstr ""
+
+#: footer.php:66 footer.php:67
+msgid "Google Plus"
+msgstr ""
+
+#: footer.php:74 footer.php:75
+msgid "Vimeo"
+msgstr ""
+
+#: footer.php:82 footer.php:83
+msgid "YouTube"
+msgstr ""
+
+#: functions.php:94
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:95
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:142
+msgid "Primary Sidebar"
+msgstr ""
+
+#: functions.php:150
+msgid "Secondary Sidebar"
+msgstr ""
+
+#: functions.php:158
+msgid "Home First Widget Area"
+msgstr ""
+
+#: functions.php:166
+msgid "Home Second Widget Area"
+msgstr ""
+
+#: functions.php:174
+msgid "Home Third Widget Area"
+msgstr ""
+
+#: functions.php:182
+msgid "Blog Primary Sidebar"
+msgstr ""
+
+#: functions.php:190
+msgid "Blog Secondary Sidebar"
+msgstr ""
+
+#: functions.php:198
+msgid "Header Widget Area"
+msgstr ""
+
+#. translators: If there are characters in your language that are not supported
+#. 		by Source Sans or Gilda Display, translate this to 'off'. Do not translate
+#. into your own language.
+#: functions.php:218
+msgctxt "Source Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:221
+msgctxt "Gilda Display font: on or off"
+msgid "on"
+msgstr ""
+
+#: header.php:51
+msgid "Menu"
+msgstr ""
+
+#: header.php:52
+msgid "Skip to content"
+msgstr ""
+
+#: image.php:24
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+msgstr ""
+
+#: image.php:39
+msgid "&larr; Previous"
+msgstr ""
+
+#: image.php:40
+msgid "Next &rarr;"
+msgstr ""
+
+#: image.php:100
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#: image.php:102
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+
+#: image.php:104
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+
+#: image.php:106
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
+
+#: inc/cpt/rooms.php:31
+msgid "Amenities"
+msgstr ""
+
+#: inc/cpt/rooms.php:32
+msgid "Amenity"
+msgstr ""
+
+#: inc/cpt/rooms.php:33
+msgid "Search Amenities"
+msgstr ""
+
+#: inc/cpt/rooms.php:34
+msgid "Popular Amenities"
+msgstr ""
+
+#: inc/cpt/rooms.php:35
+msgid "All Amenities"
+msgstr ""
+
+#: inc/cpt/rooms.php:36
+msgid "Edit Amenity"
+msgstr ""
+
+#: inc/cpt/rooms.php:37
+msgid "View Amenity"
+msgstr ""
+
+#: inc/cpt/rooms.php:38
+msgid "Update Amenity"
+msgstr ""
+
+#: inc/cpt/rooms.php:39
+msgid "Add New Amenity"
+msgstr ""
+
+#: inc/cpt/rooms.php:40
+msgid "New Amenity Name"
+msgstr ""
+
+#: inc/cpt/rooms.php:41
+msgid "Separate Amenities with commas"
+msgstr ""
+
+#: inc/cpt/rooms.php:42
+msgid "Add or remove Amenities"
+msgstr ""
+
+#: inc/cpt/rooms.php:43
+msgid "Choose from the most used Amenities"
+msgstr ""
+
+#: inc/cpt/rooms.php:45
+msgid "No Amenities found"
+msgstr ""
+
+#: inc/cpt/rooms.php:53 inc/cpt/testimonials.php:38
+msgid "Rooms your hotel offers"
+msgstr ""
+
+#: inc/cpt/rooms.php:56 inc/cpt/rooms.php:58
+msgid "Rooms"
+msgstr ""
+
+#: inc/cpt/rooms.php:57
+msgid "Room"
+msgstr ""
+
+#: inc/cpt/rooms.php:59
+msgid "All Rooms"
+msgstr ""
+
+#: inc/cpt/rooms.php:60 inc/cpt/rooms.php:61
+msgid "Add a Room"
+msgstr ""
+
+#: inc/cpt/rooms.php:62
+msgid "Edit Room"
+msgstr ""
+
+#: inc/cpt/rooms.php:63
+msgid "New Room"
+msgstr ""
+
+#: inc/cpt/rooms.php:64
+msgid "View Room"
+msgstr ""
+
+#: inc/cpt/rooms.php:65
+msgid "Search Rooms"
+msgstr ""
+
+#: inc/cpt/rooms.php:66
+msgid "No Rooms found"
+msgstr ""
+
+#: inc/cpt/rooms.php:67
+msgid "No Rooms found in Trash"
+msgstr ""
+
+#: inc/cpt/rooms.php:120 inc/cpt/rooms.php:126
+msgid "Price"
+msgstr ""
+
+#: inc/cpt/testimonials.php:41 inc/cpt/testimonials.php:43
+msgid "Testimonials"
+msgstr ""
+
+#: inc/cpt/testimonials.php:42
+msgid "Testimonial"
+msgstr ""
+
+#: inc/cpt/testimonials.php:44
+msgid "All Testimonials"
+msgstr ""
+
+#: inc/cpt/testimonials.php:45 inc/cpt/testimonials.php:46
+msgid "Add a Testimonial"
+msgstr ""
+
+#: inc/cpt/testimonials.php:47
+msgid "Edit Testimonial"
+msgstr ""
+
+#: inc/cpt/testimonials.php:48
+msgid "New Testimonial"
+msgstr ""
+
+#: inc/cpt/testimonials.php:49
+msgid "View Testimonial"
+msgstr ""
+
+#: inc/cpt/testimonials.php:50
+msgid "Search Testimonials"
+msgstr ""
+
+#: inc/cpt/testimonials.php:51
+msgid "No Testimonials found"
+msgstr ""
+
+#: inc/cpt/testimonials.php:52
+msgid "No Testimonials found in Trash"
+msgstr ""
+
+#: inc/cpt/testimonials.php:80 inc/cpt/testimonials.php:86
+msgid "Citation"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Home Slider"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "Featured Page 1"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "Featured Page 2"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Featured Page 3"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Featured Page 4"
+msgstr ""
+
+#: inc/customizer.php:95
+msgid "Featured Page 5"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "Featured Page 6"
+msgstr ""
+
+#: inc/customizer.php:116
+msgid "Social Links"
+msgstr ""
+
+#: inc/customizer.php:125
+msgid "Twitter Link"
+msgstr ""
+
+#: inc/customizer.php:136
+msgid "Facebook Link"
+msgstr ""
+
+#: inc/customizer.php:147
+msgid "YouTube Link"
+msgstr ""
+
+#: inc/customizer.php:158
+msgid "Google Plus Link"
+msgstr ""
+
+#: inc/customizer.php:169
+msgid "Pinterest Link"
+msgstr ""
+
+#: inc/customizer.php:180
+msgid "Vimeo Link"
+msgstr ""
+
+#: inc/customizer.php:191
+msgid "Email Address"
+msgstr ""
+
+#: inc/extras.php:121
+msgid "Page %s"
+msgstr ""
+
+#: inc/template-tags.php:37
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:41
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: inc/template-tags.php:47
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:51
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:76
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:86
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: inc/template-tags.php:89
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:95
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-tags.php:122
+msgid ""
+"<span class=\"post-format-link\"><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\">%3$s</a></span> | Posted on <a href=\"%4$s\" title=\"%5$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%6$s\">%7$s</time></"
+"a><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n"
+"\" href=\"%8$s\" title=\"%9$s\" rel=\"author\">%10$s</a></span></span>"
+msgstr ""
+
+#: inc/template-tags.php:124 slider.php:40
+msgid "Permalink to %s"
+msgstr ""
+
+#: inc/template-tags.php:131 inc/template-tags.php:141
+msgid "View all posts by %s"
+msgstr ""
+
+#: inc/template-tags.php:135
+msgid ""
+"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%3$s\">%4$s</time></a><span class=\"byline\"> by "
+"<span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s"
+"\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+
+#: no-results.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:20
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: no-results.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: search.php:17
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:10
+msgctxt "assistive text"
+msgid "Search"
+msgstr ""
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:12
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: sidebar-blog-secondary.php:25
+msgid "Meta"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+#: wp-content/themes/pub/stay/style.css
+msgid "Stay"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#: wp-content/themes/pub/stay/style.css
+msgid "https://wordpress.com/themes/stay/"
+msgstr ""
+
+#. Description of the plugin/theme
+#: wp-content/themes/pub/stay/style.css
+msgid ""
+"Designed with hotels, inns, and bed & breakfasts in mind, Stay is the "
+"perfect theme for property owners. Take advantage of its Room and "
+"Testimonial post types, home page template, large imagery, and minimal "
+"layout to show off to potential guests."
+msgstr ""
+
+#. Author of the plugin/theme
+#: wp-content/themes/pub/stay/style.css
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+#: wp-content/themes/pub/stay/style.css
+msgid "https://wordpress.com/themes/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/stay/page-templates/full-width-page.php
+msgid "Full Width Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/stay/page-templates/home-page.php
+msgid "Home"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/stay/page-templates/room-page.php
+msgid "Rooms Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/stay/page-templates/testimonial-page.php
+msgid "Testimonials Template"
+msgstr ""

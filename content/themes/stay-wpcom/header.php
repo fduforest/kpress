@@ -12,7 +12,6 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
-<meta name="msvalidate.01" content="5E28DDD7F56C0D1EDE3C58CE1F3D2CE4" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -23,22 +22,11 @@
 <?php wp_head(); ?>
 </head>
 
-<body>
-
-<span style="font-size: 10px;margin-left:60px">
-<h1 style="display: inline; font-size: 10px"><a href="http://www.la-ferme-aux-charmes.fr/tarifs-reservation-location-val-joly/">Location Val Joly (Nord 59)</a>, <a href="http://www.la-ferme-aux-charmes.fr/gite-ferme-nord/">Location Gîte Ferme Nord (59)</a></h1>, 
-<h1 style="display: inline; font-size: 10px"><a href="http://www.la-ferme-aux-charmes.fr/chambres-hotes-nord/"> location Chambres d'Hôtes Nord (59)</a></h1>.
-Découvrez le Nord-Pas de Calais, 
-<a href="http://www.la-ferme-aux-charmes.fr/parc-naturel-regional-avesnois/">le Parc de l'Avesnois</a>, 
-<a href="http://www.la-ferme-aux-charmes.fr/la-station-touristique-du-val-joly/">le Val Joly</a> 
-et Solre-le-Château avec notre <h1 style="display: inline; font-size: 10px">Maison d'Hôte</h1>.</span>
-
+<body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
-		
 			<?php
 			$header_image = get_header_image();
 			if ( ! empty( $header_image ) ) { ?>
@@ -46,6 +34,7 @@ et Solre-le-Château avec notre <h1 style="display: inline; font-size: 10px">Mai
 					<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
 				</a>
 			<?php } ?>
+			<?php stay_the_site_logo(); ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
@@ -54,9 +43,7 @@ et Solre-le-Château avec notre <h1 style="display: inline; font-size: 10px">Mai
 
 		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 		<nav role="navigation" class="site-navigation secondary-navigation">
-
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
-
 		</nav>
 		<?php endif; ?>
 

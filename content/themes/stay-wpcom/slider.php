@@ -40,7 +40,7 @@ if ( ! empty( $home_slider ) ) :
 							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'stay' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail( 'slider-img' ); ?></a>
 							<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 								<div class="entry-header">
-									<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'stay' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+									<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 								</div><!-- .entry-header -->
 							</div><!-- #post-<?php the_ID(); ?> -->
 						</li>

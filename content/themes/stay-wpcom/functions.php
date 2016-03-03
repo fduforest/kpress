@@ -31,10 +31,12 @@ function stay_set_content_width() {
 }
 add_action( 'template_redirect', 'stay_set_content_width' );
 
-/*
+/**
  * Load Jetpack compatibility file.
  */
-require( get_template_directory() . '/inc/jetpack.php' );
+if ( file_exists( get_template_directory() . '/inc/jetpack.php' ) )
+	require get_template_directory() . '/inc/jetpack.php';
+
 
 if ( ! function_exists( 'stay_setup' ) ) :
 /**
@@ -82,6 +84,7 @@ function stay_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'slider-img', 1200, 500, true );
 	add_image_size( 'feat-img', 920, 383, true );
+	add_image_size( 'feat-img-full', 1200, 383, true );
 	add_image_size( 'room-thumbnail', 200, 133, true );
 
 	/**
@@ -109,6 +112,12 @@ function stay_setup() {
 }
 endif; // stay_setup
 add_action( 'after_setup_theme', 'stay_setup' );
+
+/* Flush rewrite rules for Testimonial and Room CPTs on theme switch */
+function stay_flush_rewrite_rules() {
+     flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'stay_flush_rewrite_rules' );
 
 /**
  * Setup the WordPress core custom background feature.
@@ -234,6 +243,7 @@ add_action( 'admin_enqueue_scripts', 'stay_admin_fonts' );
  * Enqueue scripts and styles
  */
 function stay_scripts() {
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.3' );
 	wp_enqueue_style( 'stay-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'stay-source-sans' );
 	wp_enqueue_style( 'stay-gilda-display' );

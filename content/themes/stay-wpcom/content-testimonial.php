@@ -9,7 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'hotels-listing testimonial' ); ?>>
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'stay' ) ); ?>
 		<?php
 		if ( '' != get_post_meta( $post->ID, 'hotels_testimonial', true ) )
 			echo '<span class="testimonial-cite">' . esc_html( get_post_meta( $post->ID, 'hotels_testimonial', true ) ) . '</span>';
