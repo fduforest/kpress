@@ -40,9 +40,9 @@ namespace :db do
 			
 			run_locally do
 				execute :wp, "db import db_backups/#{fetch(:backup_filename)}.sql"
-				execute :wp, "search-replace #{fetch(:stage_url)} #{fetch(:wp_localurl)}"
-				execute :wp, "search-replace #{fetch(:site1_url)} #{fetch(:wp_site1_localurl)}"
-				execute :wp, "search-replace #{fetch(:site2_url)} #{fetch(:wp_site2_localurl)}"
+				execute :wp, "search-replace --all-tables --url=kpress.ovh #{fetch(:stage_url)} #{fetch(:wp_localurl)}"
+				execute :wp, "search-replace --all-tables #{fetch(:site1_url)} #{fetch(:wp_site1_localurl)}"
+				execute :wp, "search-replace --all-tables #{fetch(:site2_url)} #{fetch(:wp_site2_localurl)}"
 				execute :rm, "db_backups/#{fetch(:backup_filename)}.sql"
 
 				if Dir['db_backups/*'].empty?
