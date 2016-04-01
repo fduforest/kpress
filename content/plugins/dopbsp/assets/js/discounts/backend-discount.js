@@ -1,16 +1,15 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.6
 * File                    : assets/js/discounts/backend-discount.js
-* File Version            : 1.0.7
-* Created / Last Modified : 11 October 2015
+* File Version            : 1.0.8
+* Created / Last Modified : 16 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
 * Description             : Back end discount JavaScript class.
 */
-
 
 var DOPBSPBackEndDiscount = new function(){
     'use strict';

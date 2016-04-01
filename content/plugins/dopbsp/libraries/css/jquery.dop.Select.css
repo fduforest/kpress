@@ -2,10 +2,10 @@
 
 /*
 * Title                   : DOP Select (jQuery Plugin)
-* Version                 : 1.2
+* Version                 : 1.2.1
 * File                    : jquery.dop.Select.css
 * File Version            : 1.2.1
-* Created / Last Modified : 28 January 2015
+* Created / Last Modified : 14 December 2015
 * Copyright               : © 2014 Dot on Paper
 * Website                 : http://www.dotonpaper.net
 * Description             : DOP Select stylesheet.
@@ -71,6 +71,9 @@
 .DOPSelect.dopselect-single ul{
     background: #ffffff;
     border: 1px solid #464646;
+     -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
     display: none;
     list-style: none;
     margin: 2px 0 0 0 !important;

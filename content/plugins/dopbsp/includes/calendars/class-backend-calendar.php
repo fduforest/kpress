@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.1
+* Version                 : 2.1.3
 * File                    : includes/calendars/class-backend-calendar.php
-* File Version            : 1.1
-* Created / Last Modified : 25 August 2015
+* File Version            : 1.1.1
+* Created / Last Modified : 14 December 2015
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -128,9 +128,8 @@
                  */
                 if ($post_id == 0){
                     $this->display();
+                    die();
                 }
-
-            	die();
             }
             
             /*

@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.3
 * File                    : views/setttings/views-backend-settings.php
-* File Version            : 1.1.8
-* Created / Last Modified : 06 December 2015
+* File Version            : 1.1.9
+* Created / Last Modified : 14 December 2015
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -572,7 +572,9 @@
                 $list = array();
                 
                 while (($file = readdir($folderData)) !== false){
-                    if ($file != '.' && $file != '..' && $file != '.DS_Store'){                        
+                    if ($file != '.' 
+                            && $file != '..' 
+                            && $file != '.DS_Store'){                        
                         array_push($list, $file);
                     }
                 }

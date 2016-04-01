@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.1
+* Version                 : 2.1.6
 * File                    : includes/discounts/class-backend-discount-item.php
-* File Version            : 1.0.4
-* Created / Last Modified : 25 August 2015
+* File Version            : 1.0.5
+* Created / Last Modified : 15 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -45,7 +45,7 @@
                                                       $id));
                 
                 $DOPBSP->views->backend_discount_item->template(array('item' => $item,
-                                                              'language' => $language));
+                                                                      'language' => $language));
                 
                 die();
             }

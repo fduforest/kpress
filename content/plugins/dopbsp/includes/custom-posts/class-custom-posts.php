@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.1
+* Version                 : 2.1.3
 * File                    : includes/custom-posts/class-custom-posts.php
-* File Version            : 1.0.2
-* Created / Last Modified : 25 August 2015
+* File Version            : 1.0.3
+* Created / Last Modified : 14 December 2015
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -14,6 +14,11 @@
 
     if (!class_exists('DOPBSPCustomPosts')){
         class DOPBSPCustomPosts extends DOPBSPFrontEnd{
+            /*
+             * Public variables.
+             */
+            public $custom_posts = array();
+            
             /*
              * Constructor
              */
@@ -32,31 +37,46 @@
                 if (is_admin()
                         && $DOPBSP->classes->backend_settings_users->permission(wp_get_current_user()->ID, 'use-custom-posts')
                         || !is_admin()){
-                    $postdata = array('exclude_from_search' => false,
-                                      'has_archive' => true,
-                                      'labels' => array('name' => $DOPBSP->text('CUSTOM_POSTS'),
-                                                        'singular_name' => $DOPBSP->text('CUSTOM_POSTS'),
-                                                        'menu_name' => $DOPBSP->text('CUSTOM_POSTS'),
-                                                        'all_items' => $DOPBSP->text('CUSTOM_POSTS_ADD_ALL'),
-                                                        'add_new_item' => $DOPBSP->text('CUSTOM_POSTS_ADD'),
-                                                        'edit_item' => $DOPBSP->text('CUSTOM_POSTS_EDIT')),
-                                      'menu_icon' => $DOPBSP->paths->url.'assets/gui/images/icon-hover.png',
-                                      'public' => true,
-                                      'publicly_queryable' => true,
-                                      'rewrite' => true,
-                                      'taxonomies' => array('category', 
-                                                            'post_tag'),
-                                      'show_in_nav_menus' => true,
-                                      'supports' => array('title', 
-                                                          'editor', 
-                                                          'author', 
-                                                          'thumbnail', 
-                                                          'excerpt', 
-                                                          'trackbacks', 
-                                                          'custom-fields', 
-                                                          'comments', 
-                                                          'revisions'));
-                    register_post_type(DOPBSP_CONFIG_CUSTOM_POSTS_SLUG, $postdata);
+                    $this->custom_posts[0] = 'default';
+                    $this->custom_posts = apply_filters('dopbsp_filter_custom_posts', $this->custom_posts);
+                    
+                    for ($i=0; $i<count($this->custom_posts); $i++){
+                        $custom_post = strtoupper($this->custom_posts[$i]);
+                        
+                        $postdata = array('exclude_from_search' => false,
+                                          'has_archive' => true,
+                                          'labels' => array('add_new' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_ADD_NEW'),
+                                                            'add_new_item' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_ADD_NEW_ITEM'),
+                                                            'all_items' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_ALL_ITEMS'),
+                                                            'edit_item' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_EDIT_ITEM'),
+                                                            'menu_name' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_MENU_NAME'),
+                                                            'name' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_NAME'),
+                                                            'name_admin_bar' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_NAME_ADMIN_BAR'),
+                                                            'new_item' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_NEW_ITEM'),
+                                                            'not_found' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_NOT_FOUND'),
+                                                            'not_found_in_trash' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_NOT_FOUND_IN_TRASH'),
+                                                            'parent_item_colon' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_PARENT_ITEM_COLON'),
+                                                            'search_items' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_SEARH_ITEMS'),
+                                                            'singular_name' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_SINGULAR_NAME'),
+                                                            'view_item' => $DOPBSP->text('CUSTOM_POSTS_'.$custom_post.'_VIEW_ITEM')),
+                                          'menu_icon' => $DOPBSP->paths->url.'assets/gui/images/icon-hover.png',
+                                          'public' => true,
+                                          'publicly_queryable' => true,
+                                          'rewrite' => true,
+                                          'taxonomies' => array('category', 
+                                                                'post_tag'),
+                                          'show_in_nav_menus' => true,
+                                          'supports' => array('title', 
+                                                              'editor', 
+                                                              'author', 
+                                                              'thumbnail', 
+                                                              'excerpt', 
+                                                              'trackbacks', 
+                                                              'custom-fields', 
+                                                              'comments', 
+                                                              'revisions'));
+                        register_post_type(DOPBSP_CONFIG_CUSTOM_POSTS_SLUG, $postdata);
+                    }
                 }
             }
             

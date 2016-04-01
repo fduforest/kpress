@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.6
 * File                    : views/views.php
-* File Version            : 1.0.9
-* Created / Last Modified : 06 December 2015
+* File Version            : 1.1
+* Created / Last Modified : 19 January 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -45,7 +45,8 @@
                 
                 for ($i=0; $i<count($views); $i++){
                     if (class_exists($views[$i]['name'])){
-                        $this->$views[$i]['key'] = new $views[$i]['name']();
+                        $key = $views[$i]['key'];
+                        $this->$key = new $views[$i]['name']();
                     }
                 }
             }

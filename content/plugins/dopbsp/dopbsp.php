@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Pinpoint Booking System PRO
-Version: 2.1.2
+Version: 2.1.7
 Plugin URI: http://codecanyon.net/item/booking-system-pro-wordpress-plugin/2675936?ref=DOTonPAPER
 Description: Transform your WordPress website into a booking/reservation system. If you like this plugin, feel free to rate it five stars at <a href="http://codecanyon.net/item/booking-system-pro-wordpress-plugin/2675936?ref=DOTonPAPER" target="_blank">CodeCanyon</a> in your downloads section. If you encounter any problems please do not give a low rating but <a href="http://envato-support.dotonpaper.net" target="_blank">visit</a> our <a href="http://envato-support.dotonpaper.net" target="_blank">Support Forums</a> first so we can help you.
 Author: Dot on Paper
@@ -11,11 +11,40 @@ Author URI: http://www.dotonpaper.net
 /*
 Change log:
  
+        2.1.7 (2016-02-23)
+ 
+		* Minimum booking period for hours is correctly validated, bug repaired.
+		* The discount is calculated correctly for different rules with same time lapse, bug repaired.
+		* The discount is calculated correctly for hour intervals, bug repaired.
+		* The hours are displayed in the correct format in search, bug repaired.
+ 
+        2.1.6 (2016-01-21)
+                
+                * Some updates have been done to the code to meet the PHP7 standards.
+                * Validation for hours' availability has been improved.
+ 
+        2.1.5 (2016-01-17)
+                
+                * Fatal error that appears when WooCommerce is not installed has been repaired.
+ 
+        2.1.4 (2016-01-16)
+                
+                * Compatibility with some WooCommerce themes has been repaired.
+                * The documentation link has changed.
+                * The shop's SSL certificate will validate when the licence is activated, bug repaired.
+ 
+        2.1.3 (2015-12-18)
+                
+                * Custom post page refresh correctly, after a new post is added, bug repaired.
+                * PHP warning was repaired, when search returns nothing. 
+                * Reservations are added in WooCommerce cart if user is not logged in, bug repaired.
+                * Support for "Beautify" theme has been added.
+ 
         2.1.2 (2015-12-07)
  
                 * Add-ons' update class has been improved.
                 * New versions are checked and the plugin can be updated from WordPress administration area.
-                * The coupon code is not visible in JavaScript anymore, bug fixed.
+                * The coupon code is not visible in JavaScript anymore, bug repaired.
                 * WooCommerce functionalities have been changed. You can more easily attach Pinpoint to an WooCommerce product, variations are not needed anymore, availability is restored when an order is canceled and much more. Integration is much easier with multi vendor plugins types.
 
         2.1.1 (2015-09-09)
@@ -23,7 +52,7 @@ Change log:
                 * "Booking System" has been renamed "Pinpoint".
                 * API - List reservations added.
                 * Classes constructors have been modified to meet the PHP5 standards.
-                * Reservations list pagination display the correct reservations, bug fixed.
+                * Reservations list pagination display the correct reservations, bug repaired.
                 * Widgets constructor call has been modified to work in WordPress version 4.3.0 and higher.
 
         2.1 (2015-06-29)
@@ -32,8 +61,8 @@ Change log:
                 * API - Beta version released.
                 * Duplicate calendar added.
                 * Reservations list pagination added.
-                * PayPal small bug fixed.
-                * Security bug fixed.
+                * PayPal small bug repaired.
+                * Security bug repaired.
                 * WooCommerce "Add to cart" text added in translation.
 
         2.0.9 (2015-05-19)
@@ -701,29 +730,17 @@ Installation: Upload the folder dopbsp from the zip file to "wp-content/plugins/
          * Addons
          */
         include_once 'addons/paypal/dopbsp-paypal.php';
+        
+        $theme = wp_get_theme();
+        $theme->name == 'Beautify' || $theme->parent_theme == 'Beautify' ? include_once 'addons/themes/beautify/dopbsp-themes-beautify.php':'';
+        
+        in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins'))) || DOPBSP_CONFIG_WOOCOMMERCE_ENABLE_CODE ? include_once 'addons/woocommerce/dopbsp-woocommerce.php':'';
     }
     catch(Exception $ex){
         add_action('admin_notices', 'dopbspMissingFiles');
     }
     
     DOPBSPErrorsHandler::finish();
- 
-    /*
-     * WooCommerce classes.
-     */
-    if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))
-            || DOPBSP_CONFIG_WOOCOMMERCE_ENABLE_CODE){
-        DOPBSPErrorsHandler::start();
-
-        try{
-            include_once 'addons/woocommerce/dopbsp-woocommerce.php';
-        }
-        catch(Exception $ex){
-            add_action('admin_notices', 'dopbspMissingFiles');
-        }
-        
-        DOPBSPErrorsHandler::finish();
-    }
     
     /*
      * Global classes.
@@ -1598,6 +1615,7 @@ Installation: Upload the folder dopbsp from the zip file to "wp-content/plugins/
             delete_option('DOPBSP_db_version_settings_search');
             delete_option('DOPBSP_db_version_translation');
             delete_option('DOPBSP_db_version_woocommerce'); // This needs to be here.
+            delete_option('DOPBSP_view_pro');
 
             /*
              * Delete user options.
@@ -1723,7 +1741,7 @@ Installation: Upload the folder dopbsp from the zip file to "wp-content/plugins/
     /*
      * Remove after adding to CodeCanyon.
      */
-    add_action('admin_notices', 'dopbspMoving');
+//    add_action('admin_notices', 'dopbspMoving');
     
     function dopbspMoving(){
         $error = array();

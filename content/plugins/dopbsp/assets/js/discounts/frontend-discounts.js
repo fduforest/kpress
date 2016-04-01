@@ -1,10 +1,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.7
 * File                    : assets/js/discounts/frontend-discounts.js
-* File Version            : 1.0
-* Created / Last Modified : 08 November 2015
+* File Version            : 1.0.1
+* Created / Last Modified : 23 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -65,9 +65,9 @@ var DOPBSPFrontEndDiscounts = new function(){
         /*
          * Verify days/hours.
          */
-        coDay === '' ? ciDay:coDay;
-        endHour === '' ? startHour:endHour;
-
+        coDay = coDay === '' ? ciDay:coDay;
+        endHour = endHour === '' ? startHour:endHour;
+	
         /*
          * Calculate time lapse.
          */
@@ -119,7 +119,12 @@ var DOPBSPFrontEndDiscounts = new function(){
                         break;
                     }
                 }
-                break;
+		
+		if (discounts[i]['rules'].length === 0
+			&& discounts[i]['price'] !== 0
+				|| ruleFound){
+		    break;
+		}
             }
         }
 

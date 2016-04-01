@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.1
+* Version                 : 2.1.6
 * File                    : includes/translation/class-translation-text-rules.php
-* File Version            : 1.0.3
-* Created / Last Modified : 25 August 2015
+* File Version            : 1.0.4
+* Created / Last Modified : 15 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -47,6 +47,9 @@
                 array_push($text, array('key' => 'RULES_TITLE',
                                         'parent' => 'PARENT_RULES',
                                         'text' => 'Rules'));
+                array_push($text, array('key' => 'RULES_DEFAULT_NAME',
+                                        'parent' => 'PARENT_RULES',
+                                        'text' => 'New rule'));
                 array_push($text, array('key' => 'RULES_CREATED_BY',
                                         'parent' => 'PARENT_RULES',
                                         'text' => 'Created by'));

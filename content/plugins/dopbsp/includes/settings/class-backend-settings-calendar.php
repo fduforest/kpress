@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.1
+* Version                 : 2.1.3
 * File                    : includes/settings/class-backend-settings-calendar.php
-* File Version            : 1.0.3
-* Created / Last Modified : 25 August 2015
+* File Version            : 1.0.4
+* Created / Last Modified : 14 December 2015
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -39,7 +39,7 @@
             /*
              * Set default calendar settings.
              * 
-             * @param default_calendars (array): default calendar options values
+             * @param default_calendar (array): default calendar options values
              * 
              * @return default calendar settings array
              */
@@ -53,6 +53,10 @@
 
                                           'currency' => 'USD',
                                           'currency_position' => 'before',
+                    
+//                                          'price_thousand_separator' => ',',
+//                                          'price_decimal_separator' => '.',
+//                                          'price_decimals_no' => '2',
 
                                           'days_available' => 'true,true,true,true,true,true,true',
                                           'days_details_from_hours' => 'true',

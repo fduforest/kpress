@@ -1,10 +1,11 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.6
 * File                    : assets/js/translation/backend-translation.js
-* File Version            : 1.0.4
-* Created / Last Modified : 11 October 2015
+* File Version            : 1.0.5
+* Created / Last Modified : 16 February 2016
+* Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
 * Description             : Back end translation JavaScript class.

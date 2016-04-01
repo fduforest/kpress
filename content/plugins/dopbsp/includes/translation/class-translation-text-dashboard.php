@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.1
+* Version                 : 2.1.6
 * File                    : includes/translation/class-translation-text-dashboard.php
-* File Version            : 1.1.3
-* Created / Last Modified : 04 September 2015
+* File Version            : 1.1.4
+* Created / Last Modified : 19 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -54,6 +54,9 @@
                 array_push($text, array('key' => 'DASHBOARD_GET_STARTED_CALENDARS',
                                         'parent' => 'PARENT_DASHBOARD',
                                         'text' => 'Add a new calendar'));
+                array_push($text, array('key' => 'DASHBOARD_GET_STARTED_CALENDARS_VIEW',
+                                        'parent' => 'PARENT_DASHBOARD',
+                                        'text' => 'View calendars'));
                 array_push($text, array('key' => 'DASHBOARD_GET_STARTED_EVENTS',
                                         'parent' => 'PARENT_DASHBOARD',
                                         'text' => 'Add a new event'));

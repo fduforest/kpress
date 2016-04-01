@@ -1,10 +1,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.6
 * File                    : assets/js/calendars/backend-calendars.js
-* File Version            : 1.0.6
-* Created / Last Modified : 11 October 2015
+* File Version            : 1.0.7
+* Created / Last Modified : 16 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -30,8 +30,7 @@ var DOPBSPBackEndCalendars = new function(){
      */
     this.display = function(){
         var post_id = DOPPrototypes.$_GET('post'),
-        action = DOPPrototypes.$_GET('action'),
-        id;
+        action = DOPPrototypes.$_GET('action');
     
         DOPBSPBackEnd.clearColumns(1);
         DOPBSPBackEnd.toggleMessages('active', DOPBSPBackEnd.text('MESSAGES_LOADING'));
@@ -44,7 +43,6 @@ var DOPBSPBackEndCalendars = new function(){
             
             $.post(ajaxurl, {action: 'dopbsp_custom_posts_get',
                              post_id: post_id}, function(data){
-
                 $('.DOPBSP-admin .dopbsp-main').css('display', 'block');
                 DOPBSPBackEndCalendar.init($.trim(data));
             }).fail(function(data){
@@ -55,7 +53,7 @@ var DOPBSPBackEndCalendars = new function(){
             $.post(ajaxurl, {action: 'dopbsp_calendars_display'}, function(data){
                 $('#DOPBSP-column1 .dopbsp-column-content').html(data);
                 $('.DOPBSP-admin .dopbsp-main').css('display', 'block');
-//                DOPBSPBackEndCalendar.init(16, 1);
+		
                 DOPBSPBackEnd.toggleMessages('success', DOPBSPBackEnd.text('CALENDARS_LOAD_SUCCESS'));
             }).fail(function(data){
                 DOPBSPBackEnd.toggleMessages('error', data.status+': '+data.statusText);

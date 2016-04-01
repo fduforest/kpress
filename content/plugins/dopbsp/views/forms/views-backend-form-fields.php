@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.6
 * File                    : views/forms/views-backend-form-fields.php
-* File Version            : 1.0.6
-* Created / Last Modified : 11 October 2015
+* File Version            : 1.0.7
+* Created / Last Modified : 16 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -78,19 +78,19 @@
                         switch ($field->type){
                             case 'checkbox':
                                 $DOPBSP->views->backend_form_field->templateCheckbox(array('field' => $field,
-                                                                                   'language' => $language));
+											   'language' => $language));
                                 break;
                             case 'select':
                                 $DOPBSP->views->backend_form_field->templateSelect(array('field' => $field,
-                                                                                 'language' => $language));
+											 'language' => $language));
                                 break;
                             case 'text':
                                 $DOPBSP->views->backend_form_field->templateText(array('field' => $field,
-                                                                               'language' => $language));
+										       'language' => $language));
                                 break;
                             case 'textarea':
                                 $DOPBSP->views->backend_form_field->templateTextarea(array('field' => $field,
-                                                                                   'language' => $language));
+											   'language' => $language));
                                 break;
                         }
                     }

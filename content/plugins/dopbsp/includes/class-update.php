@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.4
 * File                    : includes/class-update.php
-* File Version            : 1.0
-* Created / Last Modified : 06 December 2015
+* File Version            : 1.0.1
+* Created / Last Modified : 07 January 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -50,7 +50,7 @@
                 $this->renew_url = $this->platform.'my-account';
                 $this->instance = '';
                 $this->domain = str_ireplace(array('http://', 'https://'), '', home_url());
-                $this->software_version = '2.1.2';
+                $this->software_version = '2.1.3';
                 $this->plugin_or_theme = 'plugin';
                 $this->text_domain = 'dopbsp';
             }

@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.1
+* Version                 : 2.1.6
 * File                    : includes/rules/class-backend-rule.php
-* File Version            : 1.0.2
-* Created / Last Modified : 25 August 2015
+* File Version            : 1.0.3
+* Created / Last Modified : 19 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -50,7 +50,7 @@
                 $language = $_POST['language'];
                 
                 $DOPBSP->views->backend_rule->template(array('id' => $id,
-                                                     'language' => $language));
+							     'language' => $language));
                 
                 die();
             }

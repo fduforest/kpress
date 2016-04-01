@@ -1,10 +1,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.6
 * File                    : assets/js/jquery.dop.backend.BSPReservationsCalendar.js
-* File Version            : 1.0.8
-* Created / Last Modified : 11 October 2015
+* File Version            : 1.0.9
+* Created / Last Modified : 16 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -2512,7 +2512,6 @@
                         HTML.push('<em>'+methods_reservation.text['addressShippingCopy']+'</em>');
                     }
                     else if (address !== ''){
-                        console.log(address);
                         for (i=0; i<fields.length; i++){
                             if (data[fields[i]['key']]['enabled']){
                                 HTML.push(methods_reservation.displayData(methods_order.text[fields[i]['text']],

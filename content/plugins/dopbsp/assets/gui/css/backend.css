@@ -614,7 +614,6 @@
 .DOPBSP-admin .dopbsp-main table.dopbsp-content-wrapper .dopbsp-column .dopbsp-column-header .dopbsp-button.dopbsp-duplicate{
     background-image: url('../images/duplicate.png');
     background-position: 11px 11px;
-    background-repeat: no-repeat;
 }
 
 .DOPBSP-admin .dopbsp-main table.dopbsp-content-wrapper .dopbsp-column .dopbsp-column-header .dopbsp-button.dopbsp-calendar{

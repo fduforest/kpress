@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.4
 * File                    : includes/class-database.php
-* File Version            : 1.2
-* Created / Last Modified : 01 December 2015
+* File Version            : 1.2.2
+* Created / Last Modified : 15 February 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -17,7 +17,7 @@
             /*
              * Private variables.
              */
-            private $db_version = 2.188;
+            private $db_version = 2.189;
             private $db_version_api_keys = 1.0;
             private $db_version_calendars = 1.0;
             private $db_version_coupons = 1.0;
@@ -226,7 +226,7 @@
                     /*
                      * Days table.
                      */
-                    $sql_days = "CREATE TABLE " . $DOPBSP->tables->days." (
+                    $sql_days = "CREATE TABLE ".$DOPBSP->tables->days." (
                                             unique_key VARCHAR(32) COLLATE ".$this->db_collation." NOT NULL,
                                             calendar_id BIGINT UNSIGNED DEFAULT ".$this->db_config->days['calendar_id']." NOT NULL,
                                             day VARCHAR(16) DEFAULT '".$this->db_config->days['day']."' COLLATE ".$this->db_collation." NOT NULL,
@@ -242,7 +242,7 @@
                                             KEY price_max (price_max)
                                         );";
                     
-                    $sql_days_available = "CREATE TABLE " . $DOPBSP->tables->days_available." (
+                    $sql_days_available = "CREATE TABLE ".$DOPBSP->tables->days_available." (
                                             unique_key VARCHAR(32) COLLATE ".$this->db_collation." NOT NULL,
                                             day VARCHAR(16) DEFAULT '".$this->db_config->days_available['day']."' COLLATE ".$this->db_collation." NOT NULL,
                                             hour VARCHAR(6) DEFAULT '".$this->db_config->days_available['hour']."' COLLATE ".$this->db_collation." NOT NULL,
@@ -252,7 +252,7 @@
                                             KEY hour (hour)
                                         );";
                     
-                    $sql_days_unavailable = "CREATE TABLE " . $DOPBSP->tables->days_unavailable." (
+                    $sql_days_unavailable = "CREATE TABLE ".$DOPBSP->tables->days_unavailable." (
                                             unique_key VARCHAR(32) COLLATE ".$this->db_collation." NOT NULL,
                                             day VARCHAR(16) DEFAULT '".$this->db_config->days_unavailable['day']."' COLLATE ".$this->db_collation." NOT NULL,
                                             hour VARCHAR(6) DEFAULT '".$this->db_config->days_unavailable['hour']."' COLLATE ".$this->db_collation." NOT NULL,
@@ -731,6 +731,11 @@
                  * Forms data.
                  */
                 $this->setForms();
+                
+                /*
+                 * Searches data.
+                 */
+                $this->setSearches();
             }
             
             /*
@@ -937,6 +942,21 @@
                                                                        'is_email' => 'false',
                                                                        'required' => 'true',
                                                                        'translation' => $DOPBSP->classes->translation->encodeJSON('FORMS_DEFAULT_MESSAGE')));
+                }
+            }
+            
+            /*
+             * Set search data.
+             */
+            function setSearches(){
+                global $wpdb;
+                global $DOPBSP;
+                
+                $control_data = $wpdb->get_row('SELECT * FROM '.$DOPBSP->tables->searches.' WHERE id=1');
+                
+                if ($wpdb->num_rows == 0){
+                    $wpdb->insert($DOPBSP->tables->searches, array('user_id' => 0,
+                                                                   'name' => $DOPBSP->text('SEARCHES_ADD_SEARCH_NAME')));
                 }
             }
             

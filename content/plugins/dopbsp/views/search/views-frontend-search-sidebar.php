@@ -79,7 +79,7 @@
                     array_push($html, '             <option value=""></option>');
                     
                     foreach ($hours as $hour){
-                        array_push($html, '         <option value="'.$hour->value.'">'.$DOPBSP->classes->prototypes->getAMPM($hour->value).'</option>');
+                        array_push($html, '         <option value="'.$hour->value.'">'.($settings_search->hours_ampm == 'true' ? $DOPBSP->classes->prototypes->getAMPM($hour->value):$hour->value).'</option>');
                     }
                     array_push($html, '         </select>');
                     array_push($html, '     </div>');
@@ -91,7 +91,7 @@
                         array_push($html, '         <option value=""></option>');
 
                         foreach ($hours as $hour){
-                            array_push($html, '     <option value="'.$hour->value.'">'.$DOPBSP->classes->prototypes->getAMPM($hour->value).'</option>');
+                            array_push($html, '     <option value="'.$hour->value.'">'.($settings_search->hours_ampm == 'true' ? $DOPBSP->classes->prototypes->getAMPM($hour->value):$hour->value).'</option>');
                         }
                         array_push($html, '     </select>');
                         array_push($html, ' </div>');

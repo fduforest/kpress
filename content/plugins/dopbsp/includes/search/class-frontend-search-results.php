@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.1
+* Version                 : 2.1.3
 * File                    : includes/search/class-frontend-search-results.php
-* File Version            : 1.0.5
-* Created / Last Modified : 25 August 2015
+* File Version            : 1.0.6
+* Created / Last Modified : 14 December 2015
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -48,8 +48,8 @@
                 
                 $search = $wpdb->get_row($wpdb->prepare('SELECT calendars_excluded FROM '.$DOPBSP->tables->searches.' WHERE id=%d',
                                                         $id));
-                $settings_search = $wpdb->get_row($wpdb->prepare('SELECT * FROM '.$DOPBSP->tables->settings_search.' WHERE search_id=%d',
-                                                                 $id));
+                $settings_search = $DOPBSP->classes->backend_settings->values($id,  
+                                                                              'search');
                 
                 /*
                  * Tables
@@ -87,7 +87,7 @@
                 $calendars = $wpdb->get_results(implode('', $query));
                 
                 $DOPBSP->classes->translation->set($language,
-                                                              false);
+                                                   false);
                 
                 $calendars = $this->available($calendars,
                                               $check_in,

@@ -2,9 +2,9 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.1
+* Version                 : 2.1.6
 * File                    : includes/calendars/class-backend-calendar-schedule.php
-* File Version            : 1.1
+* File Version            : 1.1.2
 * Created / Last Modified : 25 August 2015
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
@@ -872,8 +872,10 @@
                                                     || $settings_calendar->hours_interval_enabled == 'true') 
                                             && $key < $end_hour) || 
                                     ($settings_calendar->hours_add_last_hour_to_total_price == 'true' 
-                                                    && $settings_calendar->hours_interval_enabled == 'false' 
-                                                    && $key <= $end_hour))
+                                            && $settings_calendar->hours_interval_enabled == 'false' 
+                                            && $key <= $end_hour) || 
+                                    ($start_hour == $end_hour
+                                            && $key <= $end_hour))
                             && ($hour->status != 'available'
                                     && $hour->status != 'special'
                                     || ($hour->available != '' && $no_items > $hour->available)

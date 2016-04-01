@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.4
 * File                    : config.php
-* File Version            : 1.2
-* Created / Last Modified : 06 December 2015
+* File Version            : 1.2.2
+* Created / Last Modified : 07 January 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -77,8 +77,9 @@
     
 // ***************************************************************************** Begin help defaults.
     
-    define('DOPBSP_CONFIG_HELP_DOCUMENTATION_URL', 'http://envato-help.dotonpaper.net/booking-system-wordpress-plugin/'); // Link to plugin documentation.
+    define('DOPBSP_CONFIG_HELP_DOCUMENTATION_URL', 'https://documentation.wordpressbooking.systems/'); // Link to plugin documentation.
     define('DOPBSP_CONFIG_SHOP_URL', 'https://shop.dotonpaper.net/'); // Link to Dot on Paper shop.
+    define('DOPBSP_CONFIG_SHOP_SSL_VERIFY', false); // Verify Dot on Paper shop when activating a plugin.
     
 // ***************************************************************************** End help defaults.
     

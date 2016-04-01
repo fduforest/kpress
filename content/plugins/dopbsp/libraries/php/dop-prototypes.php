@@ -2,10 +2,10 @@
 
 /*
 * Title                   : DOP Prototypes (PHP class)
-* Version                 : 1.0.1
+* Version                 : 1.0.3
 * File                    : dop-prototypes.php
-* File Version            : 1.0.2
-* Created / Last Modified : 25 September 2014
+* File Version            : 1.0.3
+* Created / Last Modified : 19 January 2016
 * Author                  : Dot on Paper
 * Copyright               : © 2014 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -18,7 +18,7 @@
             /*
              * Constructor
              */
-            function DOPPrototypes(){
+            function __construct(){
             }
             
 /*

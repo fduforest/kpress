@@ -2,10 +2,10 @@
 
 /*
 * Title                   : Pinpoint Booking System WordPress Plugin (PRO)
-* Version                 : 2.1.2
+* Version                 : 2.1.3
 * File                    : addons/woocommerce/includes/class-woocommerce-cart.php
-* File Version            : 1.0
-* Created / Last Modified : 01 December 2015
+* File Version            : 1.0.1
+* Created / Last Modified : 17 December 2015
 * Author                  : Dot on Paper
 * Copyright               : © 2012 Dot on Paper
 * Website                 : http://www.dotonpaper.net
@@ -122,16 +122,13 @@
                  * If the product does not exist add it and attach the reservation to the new cart key.
                  */    
                 $token = $DOPBSP->classes->prototypes->getRandomString(64);
-                $woocommerce->cart->add_to_cart($product_id, 
-                                                1, 
-                                                0,
-                                                array(),
-                                                array('dopbsp_token' => $token));
-                $cart = $woocommerce->cart->get_cart();
-                
-                foreach ($cart as $cart_item_key => $cart_item){
-                    $reservation_data['cart_item_key'] = $cart_item_key;
-                }
+                $cart_item_key = $woocommerce->cart->add_to_cart($product_id, 
+                                                                 1, 
+                                                                 0,
+                                                                 array(),
+                                                                 array('dopbsp_token' => $token));
+                $woocommerce->cart->maybe_set_cart_cookies();
+                $reservation_data['cart_item_key'] = $cart_item_key;
                 $reservation_data['token'] = $token;
                 $wpdb->insert($DOPBSPWooCommerce->tables->woocommerce, $reservation_data);
 
